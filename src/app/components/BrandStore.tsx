@@ -1,7 +1,7 @@
 import { ScrollReveal } from "./ui/ScrollReveal";
-import brandstore1 from "../../assets/brandstore/brandstore-1.png";
-import brandstore2 from "../../assets/brandstore/brandstore-2.png";
-import brandstore3 from "../../assets/brandstore/brandstore-3.png";
+import brandstore1 from "../../assets/brandstore/brandstore-1.webp";
+import brandstore2 from "../../assets/brandstore/brandstore-2.webp";
+import brandstore3 from "../../assets/brandstore/brandstore-3.webp";
 
 interface Store {
   title: string;

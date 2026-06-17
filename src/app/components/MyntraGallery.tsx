@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import { ScrollReveal } from "./ui/ScrollReveal";
-import myntra01 from "../../imports/myntra-fashion/myntra-01-primary-catalog-hero.png";
-import myntra02 from "../../imports/myntra-fashion/myntra-02-lifestyle-campaign.png";
-import myntra03 from "../../imports/myntra-fashion/myntra-03-craftsmanship-detail.png";
-import myntra04 from "../../imports/myntra-fashion/myntra-04-full-body-back.png";
-import myntra05 from "../../imports/myntra-fashion/myntra-05-motion-walking.png";
-import myntra06 from "../../imports/myntra-fashion/myntra-06-primary-catalog-hero.png";
-import myntra07 from "../../imports/myntra-fashion/myntra-07-side-third-quarter.png";
-import myntra08 from "../../imports/myntra-fashion/myntra-08-craftsmanship-detail.png";
-import myntra09 from "../../imports/myntra-fashion/myntra-09-full-body-back.png";
-import myntra10 from "../../imports/myntra-fashion/myntra-10-motion-walking.png";
+import myntra01 from "../../imports/myntra-fashion/myntra-01-primary-catalog-hero.webp";
+import myntra02 from "../../imports/myntra-fashion/myntra-02-lifestyle-campaign.webp";
+import myntra03 from "../../imports/myntra-fashion/myntra-03-craftsmanship-detail.webp";
+import myntra04 from "../../imports/myntra-fashion/myntra-04-full-body-back.webp";
+import myntra05 from "../../imports/myntra-fashion/myntra-05-motion-walking.webp";
+import myntra06 from "../../imports/myntra-fashion/myntra-06-primary-catalog-hero.webp";
+import myntra07 from "../../imports/myntra-fashion/myntra-07-side-third-quarter.webp";
+import myntra08 from "../../imports/myntra-fashion/myntra-08-craftsmanship-detail.webp";
+import myntra09 from "../../imports/myntra-fashion/myntra-09-full-body-back.webp";
+import myntra10 from "../../imports/myntra-fashion/myntra-10-motion-walking.webp";
 
 const productsData = [
   {

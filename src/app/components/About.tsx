@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import aboutPortrait from "../../assets/about-portrait.jpg";
+import aboutPortrait from "../../assets/about-portrait.webp";
 import { ScrollReveal } from "./ui/ScrollReveal";
 
 export function About() {

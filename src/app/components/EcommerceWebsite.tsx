@@ -1,8 +1,8 @@
 import { ScrollReveal } from "./ui/ScrollReveal";
-import website1 from "../../assets/website/website-1.png";
-import website2 from "../../assets/website/website-2.png";
-import website3 from "../../assets/website/website-3.png";
-import website4 from "../../assets/website/website-4.png";
+import website1 from "../../assets/website/website-1.webp";
+import website2 from "../../assets/website/website-2.webp";
+import website3 from "../../assets/website/website-3.webp";
+import website4 from "../../assets/website/website-4.webp";
 
 interface WebsiteCardProps {
   label: string;

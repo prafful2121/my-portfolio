@@ -1,28 +1,28 @@
 import { ScrollReveal } from "./ui/ScrollReveal";
 import { useState, useEffect } from "react";
-import spirulina1 from "../../assets/spirulina/spirulina-1.jpg";
-import spirulina2 from "../../assets/spirulina/spirulina-2.jpg";
-import spirulina3 from "../../assets/spirulina/spirulina-3.jpg";
-import spirulina4 from "../../assets/spirulina/spirulina-4.jpg";
-import spirulina5 from "../../assets/spirulina/spirulina-5.jpg";
-import spirulina6 from "../../assets/spirulina/spirulina-6.jpg";
-import spirulina7 from "../../assets/spirulina/spirulina-7.jpg";
+import spirulina1 from "../../assets/spirulina/spirulina-1.webp";
+import spirulina2 from "../../assets/spirulina/spirulina-2.webp";
+import spirulina3 from "../../assets/spirulina/spirulina-3.webp";
+import spirulina4 from "../../assets/spirulina/spirulina-4.webp";
+import spirulina5 from "../../assets/spirulina/spirulina-5.webp";
+import spirulina6 from "../../assets/spirulina/spirulina-6.webp";
+import spirulina7 from "../../assets/spirulina/spirulina-7.webp";
 
-import magnesium1 from "../../assets/magnesium/magnesium-1.jpg";
-import magnesium2 from "../../assets/magnesium/magnesium-2.jpg";
-import magnesium3 from "../../assets/magnesium/magnesium-3.jpg";
-import magnesium4 from "../../assets/magnesium/magnesium-4.jpg";
-import magnesium5 from "../../assets/magnesium/magnesium-5.jpg";
-import magnesium6 from "../../assets/magnesium/magnesium-6.jpg";
-import magnesium7 from "../../assets/magnesium/magnesium-7.jpg";
+import magnesium1 from "../../assets/magnesium/magnesium-1.webp";
+import magnesium2 from "../../assets/magnesium/magnesium-2.webp";
+import magnesium3 from "../../assets/magnesium/magnesium-3.webp";
+import magnesium4 from "../../assets/magnesium/magnesium-4.webp";
+import magnesium5 from "../../assets/magnesium/magnesium-5.webp";
+import magnesium6 from "../../assets/magnesium/magnesium-6.webp";
+import magnesium7 from "../../assets/magnesium/magnesium-7.webp";
 
-import probiotic1 from "../../assets/probiotic/probiotic-1.jpg";
-import probiotic2 from "../../assets/probiotic/probiotic-2.jpg";
-import probiotic3 from "../../assets/probiotic/probiotic-3.jpg";
-import probiotic4 from "../../assets/probiotic/probiotic-4.jpg";
-import probiotic5 from "../../assets/probiotic/probiotic-5.jpg";
-import probiotic6 from "../../assets/probiotic/probiotic-6.jpg";
-import probiotic7 from "../../assets/probiotic/probiotic-7.jpg";
+import probiotic1 from "../../assets/probiotic/probiotic-1.webp";
+import probiotic2 from "../../assets/probiotic/probiotic-2.webp";
+import probiotic3 from "../../assets/probiotic/probiotic-3.webp";
+import probiotic4 from "../../assets/probiotic/probiotic-4.webp";
+import probiotic5 from "../../assets/probiotic/probiotic-5.webp";
+import probiotic6 from "../../assets/probiotic/probiotic-6.webp";
+import probiotic7 from "../../assets/probiotic/probiotic-7.webp";
 
 interface Product {
   id: number;
