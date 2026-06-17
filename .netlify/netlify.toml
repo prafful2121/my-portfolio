@@ -1,0 +1,27 @@
+plugins = []
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "/Users/apple/Documents/Codex/2026-06-10/files-mentioned-by-the-user-complete/work/figma-site/dist"
+publishOrigin = "ui"
+commandOrigin = "ui"
+command = "pnpm --filter @figma/my-make-file... run build"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]

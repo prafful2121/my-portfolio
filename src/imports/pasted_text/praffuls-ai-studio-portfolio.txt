@@ -1,0 +1,417 @@
+CREATE A COMPLETE PREMIUM PORTFOLIO WEBSITE DESIGN IN FIGMA
+
+PROJECT NAME
+
+PRAFFUL'S AI-POWERED STUDIO
+
+OBJECTIVE
+
+Design a world-class portfolio website for a creative studio specializing in e-commerce brand visuals, Amazon listings, Myntra creatives, product videos, brand stores, and e-commerce websites.
+
+The website should feel like a premium creative agency rather than a freelancer portfolio.
+
+DESIGN DIRECTION
+
+Create a visual experience inspired by the best modern Framer portfolio websites and luxury editorial design.
+
+The overall aesthetic should feel like a hybrid between:
+
+• Luxury fashion editorial
+• Creative technology studio
+• Premium design agency
+• Modern e-commerce creative partner
+
+Focus on:
+
+• Oversized typography
+• Strong visual hierarchy
+• Large whitespace
+• Premium art direction
+• Editorial composition
+• Modern layouts
+• Asymmetrical visual balance
+• Conversion-focused design
+• High-end creative presentation
+
+Avoid:
+
+• Generic SaaS layouts
+• Startup website aesthetics
+• Corporate agency templates
+• Busy interfaces
+• Overuse of gradients
+• Stock-photo design styles
+
+COLORS
+
+Background: #F8F8F6
+
+Primary Text: #111111
+
+Accent Color: #F4C542
+
+LAYOUT SYSTEM
+
+• Desktop-first design
+• 12-column grid
+• Max width: 1440px
+• Content width: 1280px
+• Large section spacing (160px–220px)
+• Strong vertical rhythm
+• Premium whitespace throughout
+
+TYPOGRAPHY
+
+Headings:
+Bebas Neue or similar condensed bold font
+
+Body:
+DM Sans or Inter
+
+Typography should feel bold, modern, editorial, and premium.
+
+IMPORTANT EDITABILITY RULES
+
+Every image area must be created as a separate image frame placeholder.
+
+Every video area must be created as a separate video placeholder frame.
+
+Do NOT flatten any content.
+
+Do NOT convert layouts into single images.
+
+All content must remain fully editable.
+
+All text layers must remain editable.
+
+All image frames must allow direct image replacement.
+
+All video placeholders must allow direct video replacement.
+
+All cards should be editable components.
+
+All buttons should be editable components.
+
+All spacing and layout elements should remain editable.
+
+The entire design must be organized using clean Figma layers and auto-layout where appropriate.
+
+SECTION 1 — HERO
+
+Height: 100vh
+
+Left Side:
+
+Massive typography:
+
+PRAFFUL'S
+
+AI-POWERED
+
+STUDIO
+
+Typography should dominate the screen.
+
+Highlight AI-POWERED using accent color.
+
+Create a premium editorial composition.
+
+Place a cutout image placeholder of Prafful overlapping the typography.
+
+The image placeholder must be fully replaceable.
+
+Right Side:
+
+Headline:
+
+Creating premium product experiences for modern e-commerce brands.
+
+Service Strip:
+
+Amazon Listings • Myntra Creatives • Product Videos • Brand Stores • Websites
+
+Primary CTA:
+
+VIEW WORK
+
+Secondary CTA:
+
+START A PROJECT →
+
+Large whitespace.
+
+Luxury editorial layout.
+
+SECTION 2 — ABOUT THE STUDIO
+
+Heading:
+
+ABOUT THE STUDIO
+
+Headline:
+
+Creative systems built for modern e-commerce brands.
+
+Description:
+
+I help brands create listing images, product videos, storefronts, and websites using a combination of AI-powered workflows, creative strategy, and premium visual design.
+
+Include a large portrait image placeholder.
+
+The image placeholder must be fully replaceable.
+
+SECTION 3 — SELECTED WORK
+
+Heading:
+
+SELECTED WORK
+
+Subheading:
+
+A curated collection of product videos, listing creatives, storefronts, and digital experiences.
+
+Create 3 large featured project cards.
+
+Each card contains:
+
+• Vertical video placeholder
+• Project title
+• Category
+• Short description
+
+Video placeholders must use 9:16 aspect ratio.
+
+Video placeholders must be fully replaceable.
+
+Use premium editorial card layouts.
+
+SECTION 4 — MYNTRA LISTING CREATIVES
+
+Heading:
+
+MYNTRA LISTING CREATIVES
+
+Subheading:
+
+Fashion-focused visuals designed to elevate product presentation and create stronger first impressions.
+
+Create a premium editorial gallery.
+
+Display 10 image placeholders.
+
+Aspect ratio:
+
+3:4
+
+All image placeholders must be fully replaceable.
+
+Fashion magazine aesthetic.
+
+Large visual presentation.
+
+SECTION 5 — AMAZON LISTING SYSTEMS
+
+Heading:
+
+AMAZON LISTING SYSTEMS
+
+Subheading:
+
+Strategic listing images built to communicate benefits, improve clarity, and strengthen product perception.
+
+Display 3 supplement product showcase cards.
+
+Each product card includes:
+
+• Product cover image placeholder
+• Product name
+• Category
+
+Use 1:1 aspect ratio.
+
+Each product should visually indicate a connected system of 7 listing images.
+
+All image placeholders must be replaceable.
+
+Premium product showcase layout.
+
+SECTION 6 — AMAZON BRAND STORE DESIGN
+
+Heading:
+
+AMAZON BRAND STORE DESIGN
+
+Subheading:
+
+Storefront experiences that help brands organize products, strengthen identity, and improve discovery.
+
+Display 3–5 browser-style mockup placeholders.
+
+All screenshots must be replaceable image frames.
+
+Premium presentation style.
+
+SECTION 7 — E-COMMERCE WEBSITE DESIGN
+
+Heading:
+
+E-COMMERCE WEBSITE DESIGN
+
+Subheading:
+
+Modern websites built around products, storytelling, and customer experience.
+
+Display:
+
+• Premium laptop mockup
+• Website homepage placeholder
+• Supporting screen placeholders
+
+All screens must be replaceable image frames.
+
+Luxury presentation style.
+
+SECTION 8 — WHAT I CREATE
+
+Heading:
+
+WHAT I CREATE
+
+Create 5 premium service cards.
+
+Amazon Listing Images
+
+Myntra Listing Creatives
+
+Product Videos
+
+Amazon Brand Stores
+
+E-Commerce Websites
+
+Minimal icons.
+
+Premium spacing.
+
+Clean grid layout.
+
+SECTION 9 — WHY BRANDS WORK WITH ME
+
+Heading:
+
+WHY BRANDS WORK WITH ME
+
+Create 5 premium benefit cards.
+
+Faster Content Production
+
+AI-Powered Workflows
+
+Premium Visual Quality
+
+Marketplace Expertise
+
+Conversion-Focused Design
+
+Elegant card design.
+
+Strong spacing.
+
+Premium presentation.
+
+SECTION 10 — HOW I WORK
+
+Heading:
+
+HOW I WORK
+
+Create a premium horizontal timeline.
+
+01 Discover
+
+Understanding the product, audience, and goals.
+
+02 Create
+
+Designing visuals, videos, storefronts, and digital experiences.
+
+03 Refine
+
+Improving every detail through iteration.
+
+04 Deliver
+
+Launch-ready assets prepared for real-world use.
+
+Minimal and elegant.
+
+SECTION 11 — FINAL CTA
+
+Heading:
+
+READY TO BUILD BETTER PRODUCT EXPERIENCES?
+
+Subheading:
+
+Let's create product visuals, videos, storefronts, and websites that help your brand stand out.
+
+Buttons:
+
+START A PROJECT
+
+GET IN TOUCH
+
+Large typography.
+
+Strong visual hierarchy.
+
+Premium spacing.
+
+FOOTER
+
+PRAFFUL'S AI-POWERED STUDIO
+
+Amazon Listings
+
+Myntra Creatives
+
+Product Videos
+
+Brand Stores
+
+Websites
+
+Email
+
+Instagram
+
+LinkedIn
+
+Minimal premium footer.
+
+MOTION DIRECTION
+
+Design with future Framer implementation in mind.
+
+Use layouts that support:
+
+• Smooth fade-up animations
+• Hover interactions
+• Image zoom on hover
+• Editorial transitions
+• Premium micro-interactions
+• Luxury motion design
+
+IMAGE ART DIRECTION
+
+• Large image dominance
+• Edge-to-edge showcases
+• Premium mockups
+• Fashion-editorial presentation
+• Consistent visual language
+• High-end portfolio aesthetic
+• No stock-photo feeling
+
+FINAL RESULT
+
+The final design should feel comparable to a ₹2–5 lakh premium creative agency website, with strong editorial design, oversized typography, premium whitespace, luxury visual hierarchy, and fully editable image/video placeholders that can be directly replaced with real portfolio projects inside Figma.
