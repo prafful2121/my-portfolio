@@ -70,7 +70,7 @@ export function CTA() {
             <ScrollReveal variant="fade-up" delay={240} className="w-full sm:w-auto mt-4">
               <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">
                 <a
-                  href="/start-project"
+                  href={`${import.meta.env.BASE_URL}start-project`}
                   className="inline-flex items-center justify-center bg-[#111111] text-[#F8F8F6] px-10 py-4 text-xs font-bold tracking-widest hover:bg-[#F8F8F6] hover:text-[#111111] transition-all duration-300 uppercase shadow-md"
                   style={{ fontFamily: "'DM Sans', sans-serif" }}
                 >

@@ -1481,7 +1481,7 @@ export function Services() {
           {/* Clean footer banner for custom visual solutions */}
           <ScrollReveal variant="fade-up" delay={200}>
             <a
-              href="/start-project"
+              href={`${import.meta.env.BASE_URL}start-project`}
               className="mt-12 border border-[rgba(17,17,17,0.08)] bg-white rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm text-left hover:border-[#F4C542] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_12px_32px_-8px_rgba(244,197,66,0.35)] transition-all duration-300 cursor-pointer select-none block"
             >
               <h4

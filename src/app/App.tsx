@@ -60,7 +60,7 @@ export default function App() {
 
   return (
     <div style={{ background: "#F8F8F6" }}>
-      {currentPath === "/start-project" ? (
+      {currentPath.endsWith("/start-project") ? (
         <StartProject />
       ) : (
         <>

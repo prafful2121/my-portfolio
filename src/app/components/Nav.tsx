@@ -192,7 +192,7 @@ export function Nav() {
         {/* CTA Button */}
         <div className="hidden md:flex items-center">
           <a
-            href="/start-project"
+            href={`${import.meta.env.BASE_URL}start-project`}
             className="relative overflow-hidden inline-flex items-center justify-center border border-[#111111] px-6 py-3 text-[11px] font-bold tracking-widest text-[#111111] transition-all duration-300 hover:bg-[#F4C542] hover:text-[#111111] hover:border-[#F4C542] uppercase"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
@@ -247,7 +247,7 @@ export function Nav() {
               </a>
             ))}
             <a
-              href="/start-project"
+              href={`${import.meta.env.BASE_URL}start-project`}
               className="mt-4 w-full text-center bg-[#111111] text-[#F8F8F6] py-3.5 text-xs font-bold tracking-widest uppercase hover:bg-[#F4C542] hover:text-[#111111] transition-all duration-300"
             >
               START A PROJECT
