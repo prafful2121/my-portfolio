@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { ScrollReveal } from "./ui/ScrollReveal";
 import video01 from "../../imports/Woman_showcasing_top_Zara_ad_202606061919.mp4";
 import video02 from "../../imports/Woman_showcasing_top_Zara_ad_202606061927.mp4";
@@ -29,6 +30,92 @@ const projects = [
     tag: "03",
   },
 ];
+
+interface LazyVideoProps {
+  src: string;
+  className?: string;
+}
+
+function LazyVideo({ src, className }: LazyVideoProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [shouldLoad, setShouldLoad] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    if (!videoElement) return;
+
+    // 1. Observer to lazy-load the video source when it gets close to the viewport
+    const loadObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShouldLoad(true);
+            loadObserver.disconnect();
+          }
+        });
+      },
+      {
+        rootMargin: "350px 0px", // Start loading when within 350px of the viewport
+      }
+    );
+
+    loadObserver.observe(videoElement);
+
+    // 2. Observer to play/pause the video when it enters/leaves the visible viewport
+    const playObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsPlaying(true);
+          } else {
+            setIsPlaying(false);
+          }
+        });
+      },
+      {
+        rootMargin: "0px 0px -10% 0px", // Trigger slightly inside the viewport
+        threshold: 0.1, // Trigger when 10% visible
+      }
+    );
+
+    playObserver.observe(videoElement);
+
+    return () => {
+      loadObserver.disconnect();
+      playObserver.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    if (!videoElement || !shouldLoad) return;
+
+    if (isPlaying) {
+      const playPromise = videoElement.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          // Autoplay prevented (e.g., Low Power Mode or browser settings)
+          console.warn("Video play prevented:", error);
+        });
+      }
+    } else {
+      videoElement.pause();
+    }
+  }, [isPlaying, shouldLoad]);
+
+  return (
+    <video
+      ref={videoRef}
+      src={shouldLoad ? src : undefined}
+      loop
+      muted
+      playsInline
+      className={className}
+      preload={shouldLoad ? "auto" : "none"}
+    />
+  );
+}
 
 export function SelectedWork() {
   return (
@@ -93,12 +180,8 @@ export function SelectedWork() {
                     )
                   }
                 >
-                  <video
+                  <LazyVideo
                     src={p.video}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-103 transition-transform duration-[1.2s] ease-out"
                   />
                   
