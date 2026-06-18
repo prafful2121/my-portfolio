@@ -41,37 +41,30 @@ export function Nav() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#F8F8F6]"
       style={{
-        background: scrolled ? "rgba(248, 248, 246, 0.85)" : "transparent",
-        backdropFilter: scrolled ? "blur(20px)" : "none",
-        borderBottom: scrolled ? "1px solid rgba(17, 17, 17, 0.06)" : "1px solid transparent",
+        borderBottom: "1px solid rgba(17, 17, 17, 0.08)",
       }}
     >
       <div 
-        className={`max-w-[1280px] mx-auto px-6 sm:px-10 flex items-center justify-between transition-all duration-500 ${
-          scrolled ? "py-3 md:py-3.5" : "py-5 md:py-6"
+        className={`max-w-[1280px] mx-auto px-6 sm:px-10 flex items-center justify-between transition-all duration-300 ${
+          scrolled ? "py-2.5 md:py-3.5" : "py-5 md:py-6"
         }`}
       >
         <div className="flex flex-col text-left">
           <a
-            href="/"
-            className="flex flex-col select-none group"
-            onClick={(e) => {
-              if (window.location.pathname === "/") {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }
-            }}
+            href="#work"
+            className="flex flex-col select-none group cursor-pointer"
+            onClick={handleNavClick("#work")}
           >
             <span
               style={{
                 fontFamily: "'Bebas Neue', sans-serif",
                 fontSize: "24px",
                 letterSpacing: "0.05em",
-                color: "#111111",
                 lineHeight: "1",
               }}
+              className="text-[#111111] group-hover:text-[#F4C542] transition-colors duration-300"
             >
               PRAFFUL'S
             </span>
