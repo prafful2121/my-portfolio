@@ -7,7 +7,7 @@ export function ServicesGuide() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [inquireState, setInquireState] = useState<"idle" | "loading" | "success">("idle");
 
-  const totalSlides = 11;
+  const totalSlides = 10;
 
   const scrollToSlide = (index: number) => {
     const slides = document.querySelectorAll(".services-guide-page .slide");
@@ -136,66 +136,13 @@ export function ServicesGuide() {
           </div>
         </section>
 
-        {/* Slide 2: About & Why Work With Us */}
-        <section className="slide slide-about" id="about">
-          <div className="slide-content">
-            <div className="grid grid-2">
-              <div class="col col-left">
-                <span className="slide-num">02 / OVERVIEW</span>
-                <h2 className="slide-title">Helping Modern Brands Sell More.</h2>
-                <p className="lead-text">
-                  We help e-commerce brands create premium creative assets that increase trust, improve conversions, and elevate their online presence.
-                </p>
-                <p className="body-text text-justify">
-                  From Amazon listings and Shopify websites to AI-powered product photography, fashion listings, and product videos, we build high-quality visuals designed to help brands sell more.
-                </p>
-              </div>
 
-              <div className="col col-right border-left-editorial">
-                <h3 className="subsection-title">Why Work With Us?</h3>
-                <ul className="why-us-list">
-                  <li>
-                    <span className="why-num">01</span>
-                    <div>
-                      <h4 className="why-title">AI-powered creative production</h4>
-                      <p className="why-desc">Smarter, faster asset pipelines without logistical set boundaries.</p>
-                    </div>
-                  </li>
-                  <li>
-                    <span className="why-num">02</span>
-                    <div>
-                      <h4 className="why-title">Premium commercial-quality visuals</h4>
-                      <p className="why-desc">Studio-grade outputs matching international retail aesthetics.</p>
-                    </div>
-                  </li>
-                  <li>
-                    <span className="why-num">03</span>
-                    <div>
-                      <h4 className="why-title">Conversion-focused design approach</h4>
-                      <p className="why-desc">Visual structures structured specifically to elevate CTR and orders.</p>
-                    </div>
-                  </li>
-                  <li>
-                    <span className="why-num">04</span>
-                    <div>
-                      <h4 className="why-title">Marketplace &amp; Shopify Expertise</h4>
-                      <p className="why-desc">Deep knowledge in listing rules for Amazon, Myntra, and Shopify themes.</p>
-                    </div>
-                  </li>
-                </ul>
-                <div className="why-extra-footer">
-                  <span className="accent-dot"></span> Fast turnaround &amp; scalable creative support for growing brands.
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Slide 3: Amazon Marketplace */}
         <section className="slide slide-services-table" id="amazon">
           <div className="slide-content">
             <div className="section-header">
-              <span className="slide-num">03 / CHANNELS</span>
+              <span className="slide-num">02 / CHANNELS</span>
               <h2 className="slide-title">Amazon Marketplace</h2>
               <p className="section-subtitle">High-converting graphic assets tailored specifically for Amazon’s layout specifications.</p>
             </div>
@@ -255,7 +202,7 @@ export function ServicesGuide() {
         <section className="slide slide-services-table" id="photography">
           <div className="slide-content">
             <div className="section-header">
-              <span class="slide-num">04 / CGI &amp; ART DIRECTION</span>
+              <span className="slide-num">03 / CGI &amp; ART DIRECTION</span>
               <h2 className="slide-title">Product Photography &amp; AI Visuals</h2>
               <p className="section-subtitle">Hyper-realistic environmental composites and studio product renderings.</p>
             </div>
@@ -315,8 +262,8 @@ export function ServicesGuide() {
         <section className="slide slide-services-table" id="shopify">
           <div className="slide-content">
             <div className="section-header">
-              <span className="slide-num">05 / PLATFORMS</span>
-              <h2 class="slide-title">Website &amp; Shopify</h2>
+              <span className="slide-num">04 / PLATFORMS</span>
+              <h2 className="slide-title">Website &amp; Shopify</h2>
               <p className="section-subtitle">Bespoke storefront banners, user interfaces, and high-performance theme builds.</p>
             </div>
 
@@ -365,7 +312,7 @@ export function ServicesGuide() {
         <section className="slide slide-services-table" id="myntra">
           <div className="slide-content">
             <div className="section-header">
-              <span className="slide-num">06 / APPAREL</span>
+              <span className="slide-num">05 / APPAREL</span>
               <h2 className="slide-title">Fashion &amp; Myntra</h2>
               <p className="section-subtitle">Apparel catalog listing graphics and cinematic visual showcases for clothing lines.</p>
             </div>
@@ -405,7 +352,7 @@ export function ServicesGuide() {
         <section className="slide slide-services-table" id="videos">
           <div className="slide-content">
             <div className="section-header">
-              <span className="slide-num">07 / MOTION CREATIVE</span>
+              <span className="slide-num">06 / MOTION CREATIVE</span>
               <h2 className="slide-title">Product Videos</h2>
               <p className="section-subtitle">Immersive and scroll-stopping promotional motion media optimized for digital platforms.</p>
             </div>
@@ -445,7 +392,7 @@ export function ServicesGuide() {
         <section className="slide slide-services-table" id="branding">
           <div className="slide-content">
             <div className="section-header">
-              <span className="slide-num">08 / SOCIAL &amp; D2C IDENTITY</span>
+              <span className="slide-num">07 / SOCIAL &amp; D2C IDENTITY</span>
               <h2 className="slide-title">Branding &amp; Social Media</h2>
               <p className="section-subtitle">Visual brand setups, custom mockups, and carousels designed to drive organic engagement.</p>
             </div>
@@ -500,7 +447,7 @@ export function ServicesGuide() {
         <section className="slide slide-pricing" id="partnerships">
           <div className="slide-content">
             <div className="section-header">
-              <span className="slide-num">09 / SCALING</span>
+              <span className="slide-num">08 / SCALING</span>
               <h2 className="slide-title">Monthly Partnerships</h2>
               <p className="section-subtitle">Establish an ongoing workflow and secure recurring priority service slots.</p>
             </div>
@@ -597,7 +544,7 @@ export function ServicesGuide() {
 
               {/* Brand Partner Tier */}
               <div className="pricing-card">
-                <div class="card-header">
+                <div className="card-header">
                   <h3 className="tier-name">Brand Partner</h3>
                   <p className="tier-subtitle">Full scale creative partner</p>
                   <div className="price-container">
@@ -652,7 +599,7 @@ export function ServicesGuide() {
             <div className="grid grid-2">
               {/* Column Left: Process */}
               <div className="col col-left">
-                <span className="slide-num">10 / WORKFLOW</span>
+                <span className="slide-num">09 / WORKFLOW</span>
                 <h2 className="slide-title">Our Process</h2>
                 <div className="process-steps">
                   {/* Step 1 */}
@@ -682,7 +629,7 @@ export function ServicesGuide() {
                   >
                     <div className="step-header">
                       <span className="step-num-circle">02</span>
-                      <h3 class="step-name">Creative Direction</h3>
+                      <h3 className="step-name">Creative Direction</h3>
                     </div>
                     <div className="step-content">
                       <p>Planning the visual style and messaging.</p>
@@ -789,7 +736,7 @@ export function ServicesGuide() {
             <div className="grid grid-2">
               {/* Column Left: FAQs */}
               <div className="col col-left">
-                <span className="slide-num">11 / FAQ</span>
+                <span className="slide-num">10 / FAQ</span>
                 <h2 className="slide-title">Frequently Asked Questions</h2>
 
                 <div className="faq-container">
