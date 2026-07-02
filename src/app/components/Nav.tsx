@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
+  { label: "Investment", href: "/services-guide" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
@@ -27,6 +28,11 @@ export function Nav() {
   }, []);
 
   const handleNavClick = (href: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!href.startsWith("#")) {
+      setOpen(false);
+      return;
+    }
+
     const target = document.querySelector(href);
 
     if (!target) {

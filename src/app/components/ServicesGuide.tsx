@@ -82,10 +82,10 @@ export function ServicesGuide() {
     <div className="services-guide-page">
       {/* Top Navigation Bar */}
       <header className="header">
-        <div className="logo">
+        <a href="/" className="logo cursor-pointer">
           <span className="logo-bold">PRAFFUL'S</span>
           <span className="logo-light">AI-POWERED STUDIO</span>
-        </div>
+        </a>
         <div className="header-right">
           <span className="guide-version">2026/2027 EDITION</span>
           <button onClick={() => scrollToSlide(10)} className="btn btn-sm btn-outline">
