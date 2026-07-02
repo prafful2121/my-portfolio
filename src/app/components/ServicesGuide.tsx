@@ -74,7 +74,7 @@ export function ServicesGuide() {
     setTimeout(() => {
       setInquireState("success");
       window.location.href =
-        "mailto:prafful.mahawar2000@gmail.com?subject=Inquiry: Services %26 Investment&body=Hello Prafful,%0A%0AI would like to request a custom quote proposal for our e-commerce brand.%0A%0ABrand Name:%0AServices Needed:%0ABudget Range:";
+        "mailto:prafful.mahawar2000@gmail.com?subject=Inquiry: Pricing %26 Plans&body=Hello Prafful,%0A%0AI would like to request a custom quote proposal for our e-commerce brand.%0A%0ABrand Name:%0AServices Needed:%0ABudget Range:";
     }, 1000);
   };
 
@@ -99,7 +99,7 @@ export function ServicesGuide() {
         {/* Slide 1: Cover */}
         <section className="slide slide-cover" id="cover">
           <div className="slide-content">
-            <div className="cover-eyebrow">SERVICES &amp; INVESTMENT</div>
+            <div className="cover-eyebrow">PRICING &amp; PLANS</div>
             <h1 className="cover-title">
               <span>AI-POWERED</span>
               <span className="accent-text">CREATIVE SOLUTIONS</span>
@@ -904,7 +904,7 @@ export function ServicesGuide() {
         <div className="footer-left">
           <span className="footer-logo">PRAFFUL'S AI-POWERED STUDIO</span>
           <span className="footer-slash">//</span>
-          <span className="footer-doc-title">SERVICES &amp; INVESTMENT GUIDE</span>
+          <span className="footer-doc-title">PRICING &amp; PLANS GUIDE</span>
         </div>
         <div className="footer-center">
           <span className="current-slide-num">{String(currentSlide + 1).padStart(2, "0")}</span>
