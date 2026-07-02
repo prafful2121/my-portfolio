@@ -4,9 +4,9 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
-  { label: "Investment", href: "/services-guide" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
+  { label: "Pricing and Plans", href: "/services-guide" },
 ];
 
 const workDropdownItems = [
