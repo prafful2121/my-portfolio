@@ -74,7 +74,7 @@ export function ServicesGuide() {
     setTimeout(() => {
       setInquireState("success");
       window.location.href =
-        "mailto:hello@praffulstudio.com?subject=Inquiry: Services %26 Investment&body=Hello Prafful,%0A%0AI would like to request a custom quote proposal for our e-commerce brand.%0A%0ABrand Name:%0AServices Needed:%0ABudget Range:";
+        "mailto:prafful.mahawar2000@gmail.com?subject=Inquiry: Services %26 Investment&body=Hello Prafful,%0A%0AI would like to request a custom quote proposal for our e-commerce brand.%0A%0ABrand Name:%0AServices Needed:%0ABudget Range:";
     }, 1000);
   };
 
@@ -840,32 +840,32 @@ export function ServicesGuide() {
                   <div className="contact-detail-item">
                     <span className="contact-label">Email</span>
                     <span className="contact-value">
-                      <a href="mailto:hello@praffulstudio.com" className="hover-underline">
-                        hello@praffulstudio.com
+                      <a href="mailto:prafful.mahawar2000@gmail.com" className="hover-underline">
+                        prafful.mahawar2000@gmail.com
                       </a>
                     </span>
                   </div>
                   <div className="contact-detail-item">
                     <span className="contact-label">Phone / WhatsApp</span>
                     <span className="contact-value">
-                      <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="hover-underline">
-                        +91 99999 99999
+                      <a href="https://wa.me/919887574517" target="_blank" rel="noopener noreferrer" className="hover-underline">
+                        +91 98875 74517
                       </a>
                     </span>
                   </div>
                   <div className="contact-detail-item">
                     <span className="contact-label">Website</span>
                     <span className="contact-value">
-                      <a href="https://praffulstudio.com" target="_blank" rel="noopener noreferrer" className="hover-underline">
-                        www.praffulstudio.com
+                      <a href="https://prafful2121.github.io/my-portfolio/" target="_blank" rel="noopener noreferrer" className="hover-underline">
+                        prafful2121.github.io/my-portfolio/
                       </a>
                     </span>
                   </div>
                   <div className="contact-detail-item">
                     <span className="contact-label">LinkedIn</span>
                     <span className="contact-value">
-                      <a href="https://linkedin.com/in/prafful" target="_blank" rel="noopener noreferrer" className="hover-underline">
-                        linkedin.com/in/prafful
+                      <a href="https://www.linkedin.com/in/praffulmahawar" target="_blank" rel="noopener noreferrer" className="hover-underline">
+                        linkedin.com/in/praffulmahawar
                       </a>
                     </span>
                   </div>
