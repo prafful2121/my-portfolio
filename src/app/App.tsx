@@ -16,6 +16,7 @@ import { CTA } from "./components/CTA";
 import { Footer } from "./components/Footer";
 import { Lightbox } from "./components/Lightbox";
 import { StartProject } from "./components/StartProject";
+import { ServicesGuide } from "./components/ServicesGuide";
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -62,6 +63,8 @@ export default function App() {
     <div style={{ background: "#F8F8F6" }}>
       {currentPath.endsWith("/start-project") ? (
         <StartProject />
+      ) : currentPath.endsWith("/services-guide") || currentPath.endsWith("/investment") ? (
+        <ServicesGuide />
       ) : (
         <>
           <Nav />
