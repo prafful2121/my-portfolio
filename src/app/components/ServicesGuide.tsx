@@ -743,7 +743,7 @@ export function ServicesGuide() {
               </div>
 
               {/* Column Right: Add-ons */}
-              <div className="col col-right border-left-editorial" style={{ paddingLeft: "var(--spacing-inner)" }}>
+              <div className="col col-right border-left-editorial">
                 <span className="slide-num">OPTIONAL ENHANCEMENTS</span>
                 <h3 className="subsection-title">Add-ons</h3>
                 <div className="table-container add-ons-wrapper">
@@ -831,7 +831,7 @@ export function ServicesGuide() {
               </div>
 
               {/* Column Right: Contact Card */}
-              <div className="col col-right border-left-editorial" style={{ paddingLeft: "var(--spacing-inner)" }}>
+              <div className="col col-right border-left-editorial">
                 <span className="slide-num">GET IN TOUCH</span>
                 <h2 className="slide-title" style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>Prafful's AI-Powered Studio</h2>
                 <p className="body-text" style={{ marginBottom: "2rem" }}>AI-Powered Creative Solutions for Modern E-commerce Brands</p>
