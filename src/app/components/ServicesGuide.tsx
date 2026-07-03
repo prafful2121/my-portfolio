@@ -157,9 +157,9 @@ export function ServicesGuide() {
                   <table className="editorial-table">
                     <thead>
                       <tr>
-                        <th style={{ width: "40%" }}>Service</th>
+                        <th style={{ width: "35%" }}>Service</th>
                         <th style={{ width: "40%" }}>Includes</th>
-                        <th style={{ width: "20%", textAlign: "right" }}>Starting From</th>
+                        <th style={{ width: "25%", textAlign: "right" }}>Starting From</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -212,9 +212,9 @@ export function ServicesGuide() {
                   <table className="editorial-table">
                     <thead>
                       <tr>
-                        <th style={{ width: "40%" }}>Service</th>
+                        <th style={{ width: "35%" }}>Service</th>
                         <th style={{ width: "40%" }}>Includes</th>
-                        <th style={{ width: "20%", textAlign: "right" }}>Starting From</th>
+                        <th style={{ width: "25%", textAlign: "right" }}>Starting From</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -260,9 +260,9 @@ export function ServicesGuide() {
                   <table className="editorial-table">
                     <thead>
                       <tr>
-                        <th style={{ width: "40%" }}>Service</th>
+                        <th style={{ width: "35%" }}>Service</th>
                         <th style={{ width: "40%" }}>Includes</th>
-                        <th style={{ width: "20%", textAlign: "right" }}>Starting From</th>
+                        <th style={{ width: "25%", textAlign: "right" }}>Starting From</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -315,9 +315,9 @@ export function ServicesGuide() {
                   <table className="editorial-table">
                     <thead>
                       <tr>
-                        <th style={{ width: "40%" }}>Service</th>
+                        <th style={{ width: "35%" }}>Service</th>
                         <th style={{ width: "40%" }}>Includes</th>
-                        <th style={{ width: "20%", textAlign: "right" }}>Starting From</th>
+                        <th style={{ width: "25%", textAlign: "right" }}>Starting From</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -363,9 +363,9 @@ export function ServicesGuide() {
                   <table className="editorial-table">
                     <thead>
                       <tr>
-                        <th style={{ width: "40%" }}>Service</th>
+                        <th style={{ width: "35%" }}>Service</th>
                         <th style={{ width: "40%" }}>Includes</th>
-                        <th style={{ width: "20%", textAlign: "right" }}>Starting From</th>
+                        <th style={{ width: "25%", textAlign: "right" }}>Starting From</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -408,9 +408,9 @@ export function ServicesGuide() {
                   <table className="editorial-table">
                     <thead>
                       <tr>
-                        <th style={{ width: "40%" }}>Service</th>
+                        <th style={{ width: "35%" }}>Service</th>
                         <th style={{ width: "40%" }}>Includes</th>
-                        <th style={{ width: "20%", textAlign: "right" }}>Starting From</th>
+                        <th style={{ width: "25%", textAlign: "right" }}>Starting From</th>
                       </tr>
                     </thead>
                     <tbody>
