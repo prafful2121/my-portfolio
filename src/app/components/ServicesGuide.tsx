@@ -7,7 +7,7 @@ export function ServicesGuide() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [inquireState, setInquireState] = useState<"idle" | "loading" | "success">("idle");
 
-  const totalSlides = 10;
+  const totalSlides = 7;
 
   const scrollToSlide = (index: number) => {
     const slides = document.querySelectorAll(".services-guide-page .slide");
@@ -88,7 +88,7 @@ export function ServicesGuide() {
         </a>
         <div className="header-right">
           <span className="guide-version">2026/2027 EDITION</span>
-          <button onClick={() => scrollToSlide(10)} className="btn btn-sm btn-outline">
+          <button onClick={() => scrollToSlide(6)} className="btn btn-sm btn-outline">
             Inquire Now
           </button>
         </div>
@@ -138,307 +138,304 @@ export function ServicesGuide() {
 
 
 
-        {/* Slide 3: Amazon Marketplace */}
-        <section className="slide slide-services-table" id="amazon">
+        {/* Slide 2: Marketplaces (Amazon & Myntra) */}
+        <section className="slide slide-services-table" id="marketplaces">
           <div className="slide-content">
             <div className="section-header">
-              <span className="slide-num">02 / CHANNELS</span>
-              <h2 className="slide-title">Amazon Marketplace</h2>
-              <p className="section-subtitle">High-converting graphic assets tailored specifically for Amazon’s layout specifications.</p>
+              <span className="slide-num">02 / RETAIL &amp; CHANNELS</span>
+              <h2 className="slide-title">Marketplace Solutions</h2>
+              <p className="section-subtitle">High-converting graphic and apparel catalog assets tailored for specifications.</p>
             </div>
 
-            <div className="table-container">
-              <table className="editorial-table">
-                <thead>
-                  <tr>
-                    <th style={{ width: "30%" }}>Service</th>
-                    <th style={{ width: "50%" }}>Includes</th>
-                    <th style={{ width: "20%", textAlign: "right" }}>Starting From</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="td-bold">Amazon Listing Images (7 Images)</td>
-                    <td>Complete listing with hero image, infographics, lifestyle visuals, comparison charts and feature highlights</td>
-                    <td className="td-price">₹10,000</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Amazon Listing Images (5 Images)</td>
-                    <td>Essential listing package for new products</td>
-                    <td className="td-price">₹7,500</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Single Listing Image</td>
-                    <td>One premium conversion-focused listing image</td>
-                    <td className="td-price">₹1,800</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Amazon A+ Content</td>
-                    <td>Complete premium A+ content modules</td>
-                    <td className="td-price">₹8,000</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Amazon Brand Store Design</td>
-                    <td>Complete storefront with banners, navigation and category pages</td>
-                    <td className="td-price">₹25,000</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Amazon Store Banner</td>
-                    <td>Premium storefront banner</td>
-                    <td className="td-price">₹3,500</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Amazon Brand Story</td>
-                    <td>Brand Story module for Amazon listings</td>
-                    <td className="td-price">₹5,000</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="grid grid-2">
+              <div className="col">
+                <h3 className="slide-title-sm">Amazon Marketplace</h3>
+                <p className="section-subtitle-sm">Premium listing graphics and brand store storefront designs.</p>
+                <div className="table-container">
+                  <table className="editorial-table">
+                    <thead>
+                      <tr>
+                        <th style={{ width: "40%" }}>Service</th>
+                        <th style={{ width: "40%" }}>Includes</th>
+                        <th style={{ width: "20%", textAlign: "right" }}>Starting From</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="td-bold">Amazon Listing (7 Images)</td>
+                        <td>Hero, infographics, lifestyle, comparison</td>
+                        <td className="td-price">₹10,000</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Amazon Listing (5 Images)</td>
+                        <td>Essential listing package</td>
+                        <td className="td-price">₹7,500</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Single Listing Image</td>
+                        <td>Premium conversion visual</td>
+                        <td className="td-price">₹1,800</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Amazon A+ Content</td>
+                        <td>Premium A+ modules</td>
+                        <td className="td-price">₹8,000</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Brand Store Design</td>
+                        <td>Storefront UI &amp; pages</td>
+                        <td className="td-price">₹25,000</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Amazon Store Banner</td>
+                        <td>Premium storefront banner</td>
+                        <td className="td-price">₹3,500</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Amazon Brand Story</td>
+                        <td>Brand Story module</td>
+                        <td className="td-price">₹5,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div className="col border-left-editorial">
+                <h3 className="slide-title-sm">Fashion &amp; Myntra</h3>
+                <p className="section-subtitle-sm">Apparel listing graphics and visual showcases.</p>
+                <div className="table-container">
+                  <table className="editorial-table">
+                    <thead>
+                      <tr>
+                        <th style={{ width: "40%" }}>Service</th>
+                        <th style={{ width: "40%" }}>Includes</th>
+                        <th style={{ width: "20%", textAlign: "right" }}>Starting From</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="td-bold">Myntra Listing (5 Images)</td>
+                        <td>Complete fashion listing catalog</td>
+                        <td className="td-price">₹7,500</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Fashion Product Video (8-10s)</td>
+                        <td>Premium AI product showcase</td>
+                        <td className="td-price">₹4,500</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Apparel Lifestyle Image</td>
+                        <td>Premium lifestyle visual composite</td>
+                        <td className="td-price">₹2,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Slide 4: Product Photography & AI Visuals */}
-        <section className="slide slide-services-table" id="photography">
+        {/* Slide 3: Content Production (Photography & Video) */}
+        <section className="slide slide-services-table" id="production">
           <div className="slide-content">
             <div className="section-header">
-              <span className="slide-num">03 / CGI &amp; ART DIRECTION</span>
-              <h2 className="slide-title">Product Photography &amp; AI Visuals</h2>
-              <p className="section-subtitle">Hyper-realistic environmental composites and studio product renderings.</p>
+              <span className="slide-num">03 / CGI &amp; MOTION</span>
+              <h2 className="slide-title">Content Production</h2>
+              <p className="section-subtitle">Hyper-realistic environmental composite photoshoots and cinematic video showcases.</p>
             </div>
 
-            <div className="table-container">
-              <table className="editorial-table">
-                <thead>
-                  <tr>
-                    <th style={{ width: "30%" }}>Service</th>
-                    <th style={{ width: "50%" }}>Includes</th>
-                    <th style={{ width: "20%", textAlign: "right" }}>Starting From</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="td-bold">AI Product Photoshoot</td>
-                    <td>10 premium commercial product renders</td>
-                    <td className="td-price">₹8,000</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Product Hero Image</td>
-                    <td>Studio-quality hero render</td>
-                    <td className="td-price">₹2,500</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Lifestyle Composite</td>
-                    <td>Realistic lifestyle composition</td>
-                    <td className="td-price">₹2,500</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Product Infographic</td>
-                    <td>Benefits and feature infographic</td>
-                    <td className="td-price">₹2,000</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Comparison Chart</td>
-                    <td>Premium comparison visual</td>
-                    <td className="td-price">₹2,000</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Product Retouching</td>
-                    <td>Professional cleanup and enhancement</td>
-                    <td className="td-price">₹1,000</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Label Enhancement</td>
-                    <td>Premium label enhancement and refinishing</td>
-                    <td className="td-price">₹2,000</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="grid grid-2">
+              <div className="col">
+                <h3 className="slide-title-sm">Photography &amp; AI Visuals</h3>
+                <p className="section-subtitle-sm">Environmental composites and studio product renderings.</p>
+                <div className="table-container">
+                  <table className="editorial-table">
+                    <thead>
+                      <tr>
+                        <th style={{ width: "40%" }}>Service</th>
+                        <th style={{ width: "40%" }}>Includes</th>
+                        <th style={{ width: "20%", textAlign: "right" }}>Starting From</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="td-bold">AI Product Photoshoot</td>
+                        <td>10 premium commercial renders</td>
+                        <td className="td-price">₹8,000</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Product Hero Image</td>
+                        <td>Studio-quality hero render</td>
+                        <td className="td-price">₹2,500</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Lifestyle Composite</td>
+                        <td>Realistic lifestyle composition</td>
+                        <td className="td-price">₹2,500</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Product Infographic</td>
+                        <td>Benefits &amp; feature infographic</td>
+                        <td className="td-price">₹2,000</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Comparison Chart</td>
+                        <td>Premium comparison visual</td>
+                        <td className="td-price">₹2,000</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Product Retouching</td>
+                        <td>Professional cleanup &amp; enhancement</td>
+                        <td className="td-price">₹1,000</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Label Enhancement</td>
+                        <td>Premium label refinishing</td>
+                        <td className="td-price">₹2,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div className="col border-left-editorial">
+                <h3 className="slide-title-sm">Product Videos</h3>
+                <p className="section-subtitle-sm">Immersive scroll-stopping motion media for digital platforms.</p>
+                <div className="table-container">
+                  <table className="editorial-table">
+                    <thead>
+                      <tr>
+                        <th style={{ width: "40%" }}>Service</th>
+                        <th style={{ width: "40%" }}>Includes</th>
+                        <th style={{ width: "20%", textAlign: "right" }}>Starting From</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="td-bold">Product Commercial</td>
+                        <td>15–30s premium retail ad spot</td>
+                        <td className="td-price">₹12,000</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Product Showcase Video</td>
+                        <td>8–15s feature highlight clip</td>
+                        <td className="td-price">₹6,000</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Social Product Reel</td>
+                        <td>Short-form scroll-stopping reel</td>
+                        <td className="td-price">₹5,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Slide 5: Website & Shopify */}
-        <section className="slide slide-services-table" id="shopify">
+        {/* Slide 4: Brand & Store Identity (Shopify & Social Media) */}
+        <section className="slide slide-services-table" id="identity">
           <div className="slide-content">
             <div className="section-header">
-              <span className="slide-num">04 / PLATFORMS</span>
-              <h2 className="slide-title">Website &amp; Shopify</h2>
-              <p className="section-subtitle">Bespoke storefront banners, user interfaces, and high-performance theme builds.</p>
+              <span className="slide-num">04 / STOREFRONT &amp; IDENTITY</span>
+              <h2 className="slide-title">Brand &amp; Store Identity</h2>
+              <p className="section-subtitle">Bespoke storefront banners, landing pages, and visual designs to establish credibility.</p>
             </div>
 
-            <div className="table-container">
-              <table className="editorial-table">
-                <thead>
-                  <tr>
-                    <th style={{ width: "30%" }}>Service</th>
-                    <th style={{ width: "50%" }}>Includes</th>
-                    <th style={{ width: "20%", textAlign: "right" }}>Starting From</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="td-bold">Homepage Hero Banner</td>
-                    <td>Premium homepage hero section</td>
-                    <td className="td-price">₹5,000</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Website Banner</td>
-                    <td>Promotional website banner</td>
-                    <td className="td-price">₹3,500</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Landing Page Design</td>
-                    <td>Complete high-converting landing page</td>
-                    <td className="td-price">₹15,000</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Homepage Design</td>
-                    <td>Homepage UI design</td>
-                    <td className="td-price">₹12,000</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Complete Shopify Website Design</td>
-                    <td>Complete Shopify store design</td>
-                    <td className="td-price">Starting at ₹45,000</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
+            <div className="grid grid-2">
+              <div className="col">
+                <h3 className="slide-title-sm">Website &amp; Shopify</h3>
+                <p className="section-subtitle-sm">High-performance custom storefront layouts and UI assets.</p>
+                <div className="table-container">
+                  <table className="editorial-table">
+                    <thead>
+                      <tr>
+                        <th style={{ width: "40%" }}>Service</th>
+                        <th style={{ width: "40%" }}>Includes</th>
+                        <th style={{ width: "20%", textAlign: "right" }}>Starting From</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="td-bold">Homepage Hero Banner</td>
+                        <td>Premium homepage hero section</td>
+                        <td className="td-price">₹5,000</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Website Banner</td>
+                        <td>Promotional web header banner</td>
+                        <td className="td-price">₹3,500</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Landing Page Design</td>
+                        <td>Complete high-converting layout</td>
+                        <td className="td-price">₹15,000</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Homepage Design</td>
+                        <td>Homepage interface design</td>
+                        <td className="td-price">₹12,000</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Shopify Website Design</td>
+                        <td>Complete storefront build setup</td>
+                        <td className="td-price">Starting at ₹45,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
 
-        {/* Slide 6: Fashion & Myntra */}
-        <section className="slide slide-services-table" id="myntra">
-          <div className="slide-content">
-            <div className="section-header">
-              <span className="slide-num">05 / APPAREL</span>
-              <h2 className="slide-title">Fashion &amp; Myntra</h2>
-              <p className="section-subtitle">Apparel catalog listing graphics and cinematic visual showcases for clothing lines.</p>
-            </div>
-
-            <div className="table-container">
-              <table className="editorial-table">
-                <thead>
-                  <tr>
-                    <th style={{ width: "35%" }}>Service</th>
-                    <th style={{ width: "45%" }}>Includes</th>
-                    <th style={{ width: "20%", textAlign: "right" }}>Starting From</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="td-bold">Myntra Listing Images (5 Images)</td>
-                    <td>Complete fashion listing</td>
-                    <td className="td-price">₹7,500</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Fashion Product Video (8–10 sec)</td>
-                    <td>Premium AI product showcase</td>
-                    <td className="td-price">₹4,500</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Apparel Lifestyle Image</td>
-                    <td>One premium lifestyle visual</td>
-                    <td className="td-price">₹2,000</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* Slide 7: Product Videos */}
-        <section className="slide slide-services-table" id="videos">
-          <div className="slide-content">
-            <div className="section-header">
-              <span className="slide-num">06 / MOTION CREATIVE</span>
-              <h2 className="slide-title">Product Videos</h2>
-              <p className="section-subtitle">Immersive and scroll-stopping promotional motion media optimized for digital platforms.</p>
-            </div>
-
-            <div className="table-container">
-              <table className="editorial-table">
-                <thead>
-                  <tr>
-                    <th style={{ width: "35%" }}>Service</th>
-                    <th style={{ width: "45%" }}>Includes</th>
-                    <th style={{ width: "20%", textAlign: "right" }}>Starting From</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="td-bold">Product Commercial</td>
-                    <td>15–30 second commercial</td>
-                    <td className="td-price">₹12,000</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Product Showcase Video</td>
-                    <td>8–15 second product showcase</td>
-                    <td className="td-price">₹6,000</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Social Media Product Reel</td>
-                    <td>Short-form promotional reel</td>
-                    <td className="td-price">₹5,000</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* Slide 8: Branding & Social Media */}
-        <section className="slide slide-services-table" id="branding">
-          <div className="slide-content">
-            <div className="section-header">
-              <span className="slide-num">07 / SOCIAL &amp; D2C IDENTITY</span>
-              <h2 className="slide-title">Branding &amp; Social Media</h2>
-              <p className="section-subtitle">Visual brand setups, custom mockups, and carousels designed to drive organic engagement.</p>
-            </div>
-
-            <div className="table-container">
-              <table className="editorial-table">
-                <thead>
-                  <tr>
-                    <th style={{ width: "30%" }}>Service</th>
-                    <th style={{ width: "50%" }}>Includes</th>
-                    <th style={{ width: "20%", textAlign: "right" }}>Starting From</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="td-bold">Social Media Creative</td>
-                    <td>Single premium social post</td>
-                    <td className="td-price">₹1,500</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Instagram Carousel</td>
-                    <td>Up to 10 professionally designed slides</td>
-                    <td className="td-price">₹5,000</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">LinkedIn Carousel</td>
-                    <td>Premium educational or thought-leadership carousel</td>
-                    <td className="td-price">₹5,000</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Product Launch Creative</td>
-                    <td>Launch announcement visual</td>
-                    <td className="td-price">₹3,000</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">Packaging Mockup</td>
-                    <td>Premium product packaging presentation</td>
-                    <td className="td-price">₹2,000</td>
-                  </tr>
-                  <tr>
-                    <td className="td-bold">AI Ad Creative</td>
-                    <td>Paid advertising creative</td>
-                    <td className="td-price">₹2,000</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="col border-left-editorial">
+                <h3 className="slide-title-sm">Branding &amp; Social Media</h3>
+                <p className="section-subtitle-sm">Custom mockups, brand assets, and organic carousels.</p>
+                <div className="table-container">
+                  <table className="editorial-table">
+                    <thead>
+                      <tr>
+                        <th style={{ width: "40%" }}>Service</th>
+                        <th style={{ width: "40%" }}>Includes</th>
+                        <th style={{ width: "20%", textAlign: "right" }}>Starting From</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="td-bold">Social Media Creative</td>
+                        <td>Single premium social post design</td>
+                        <td className="td-price">₹1,500</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Instagram Carousel</td>
+                        <td>Up to 10 slide custom deck</td>
+                        <td className="td-price">₹5,000</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">LinkedIn Carousel</td>
+                        <td>Educational slide carousel deck</td>
+                        <td className="td-price">₹5,000</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Product Launch Creative</td>
+                        <td>Launch announcement graphics</td>
+                        <td className="td-price">₹3,000</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">Packaging Mockup</td>
+                        <td>Premium packaging layout model</td>
+                        <td className="td-price">₹2,000</td>
+                      </tr>
+                      <tr>
+                        <td className="td-bold">AI Ad Creative</td>
+                        <td>Paid advertisement ad asset</td>
+                        <td className="td-price">₹2,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -491,7 +488,7 @@ export function ServicesGuide() {
                     <span>2 Revision Rounds</span>
                   </li>
                 </ul>
-                <button onClick={() => scrollToSlide(10)} className="btn btn-outline card-btn">Inquire Starter</button>
+                <button onClick={() => scrollToSlide(6)} className="btn btn-outline card-btn">Inquire Starter</button>
               </div>
 
               {/* Growth Tier (Featured) */}
@@ -539,7 +536,7 @@ export function ServicesGuide() {
                     <span>Priority Delivery</span>
                   </li>
                 </ul>
-                <button onClick={() => scrollToSlide(10)} className="btn btn-primary card-btn">Inquire Growth</button>
+                <button onClick={() => scrollToSlide(6)} className="btn btn-primary card-btn">Inquire Growth</button>
               </div>
 
               {/* Brand Partner Tier */}
@@ -587,7 +584,7 @@ export function ServicesGuide() {
                     <span>Fastest Turnaround &amp; Priority Support</span>
                   </li>
                 </ul>
-                <button onClick={() => scrollToSlide(10)} className="btn btn-outline card-btn">Inquire Partner</button>
+                <button onClick={() => scrollToSlide(6)} className="btn btn-outline card-btn">Inquire Partner</button>
               </div>
             </div>
           </div>
