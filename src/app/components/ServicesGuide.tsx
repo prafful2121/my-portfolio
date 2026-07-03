@@ -149,8 +149,10 @@ export function ServicesGuide() {
 
             <div className="grid grid-2">
               <div className="col">
-                <h3 className="slide-title-sm">Amazon Marketplace</h3>
-                <p className="section-subtitle-sm">Premium listing graphics and brand store storefront designs.</p>
+                <div className="col-header">
+                  <h3 className="slide-title-sm">Amazon Marketplace</h3>
+                  <p className="section-subtitle-sm">Premium listing graphics and brand store storefront designs.</p>
+                </div>
                 <div className="table-container">
                   <table className="editorial-table">
                     <thead>
@@ -202,8 +204,10 @@ export function ServicesGuide() {
               </div>
 
               <div className="col border-left-editorial">
-                <h3 className="slide-title-sm">Fashion &amp; Myntra</h3>
-                <p className="section-subtitle-sm">Apparel listing graphics and visual showcases.</p>
+                <div className="col-header">
+                  <h3 className="slide-title-sm">Fashion &amp; Myntra</h3>
+                  <p className="section-subtitle-sm">Apparel listing graphics and visual showcases.</p>
+                </div>
                 <div className="table-container">
                   <table className="editorial-table">
                     <thead>
@@ -248,8 +252,10 @@ export function ServicesGuide() {
 
             <div className="grid grid-2">
               <div className="col">
-                <h3 className="slide-title-sm">Photography &amp; AI Visuals</h3>
-                <p className="section-subtitle-sm">Environmental composites and studio product renderings.</p>
+                <div className="col-header">
+                  <h3 className="slide-title-sm">Photography &amp; AI Visuals</h3>
+                  <p className="section-subtitle-sm">Environmental composites and studio product renderings.</p>
+                </div>
                 <div className="table-container">
                   <table className="editorial-table">
                     <thead>
@@ -301,8 +307,10 @@ export function ServicesGuide() {
               </div>
 
               <div className="col border-left-editorial">
-                <h3 className="slide-title-sm">Product Videos</h3>
-                <p className="section-subtitle-sm">Immersive scroll-stopping motion media for digital platforms.</p>
+                <div className="col-header">
+                  <h3 className="slide-title-sm">Product Videos</h3>
+                  <p className="section-subtitle-sm">Immersive scroll-stopping motion media for digital platforms.</p>
+                </div>
                 <div className="table-container">
                   <table className="editorial-table">
                     <thead>
@@ -347,8 +355,10 @@ export function ServicesGuide() {
 
             <div className="grid grid-2">
               <div className="col">
-                <h3 className="slide-title-sm">Website &amp; Shopify</h3>
-                <p className="section-subtitle-sm">High-performance custom storefront layouts and UI assets.</p>
+                <div className="col-header">
+                  <h3 className="slide-title-sm">Website &amp; Shopify</h3>
+                  <p className="section-subtitle-sm">High-performance custom storefront layouts and UI assets.</p>
+                </div>
                 <div className="table-container">
                   <table className="editorial-table">
                     <thead>
@@ -390,8 +400,10 @@ export function ServicesGuide() {
               </div>
 
               <div className="col border-left-editorial">
-                <h3 className="slide-title-sm">Branding &amp; Social Media</h3>
-                <p className="section-subtitle-sm">Custom mockups, brand assets, and organic carousels.</p>
+                <div className="col-header">
+                  <h3 className="slide-title-sm">Branding &amp; Social Media</h3>
+                  <p className="section-subtitle-sm">Custom mockups, brand assets, and organic carousels.</p>
+                </div>
                 <div className="table-container">
                   <table className="editorial-table">
                     <thead>
@@ -545,10 +557,9 @@ export function ServicesGuide() {
                   <h3 className="tier-name">Brand Partner</h3>
                   <p className="tier-subtitle">Full scale creative partner</p>
                   <div className="price-container">
-                    <span className="price-symbol">Starting at </span>
                     <span className="price-symbol">₹</span>
                     <span className="price-value">90,000</span>
-                    <span className="price-period">/ mo</span>
+                    <span className="price-period">/ month</span>
                   </div>
                 </div>
                 <div className="card-divider"></div>

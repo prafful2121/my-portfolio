@@ -102,6 +102,16 @@
   padding-left: var(--spacing-inner);
 }
 
+.services-guide-page .col-header {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .services-guide-page .col-header {
+    min-height: 120px;
+  }
+}
+
 /* Header Component */
 .services-guide-page .header {
   position: absolute;
