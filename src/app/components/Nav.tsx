@@ -6,7 +6,7 @@ const navItems = [
   { label: "Process", href: "#process" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
-  { label: "Pricing and Plans", href: "/services-guide" },
+  { label: "Pricing and Plans", href: `${import.meta.env.BASE_URL}services-guide` },
 ];
 
 const workDropdownItems = [
