@@ -7,7 +7,7 @@ export function ServicesGuide() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [inquireState, setInquireState] = useState<"idle" | "loading" | "success">("idle");
 
-  const totalSlides = 7;
+  const totalSlides = 8;
 
   const scrollToSlide = (index: number) => {
     const slides = document.querySelectorAll(".services-guide-page .slide");
@@ -88,7 +88,7 @@ export function ServicesGuide() {
         </a>
         <div className="header-right">
           <span className="guide-version">2026/2027 EDITION</span>
-          <button onClick={() => scrollToSlide(6)} className="btn btn-sm btn-outline">
+          <button onClick={() => scrollToSlide(7)} className="btn btn-sm btn-outline">
             Inquire Now
           </button>
         </div>
@@ -107,6 +107,9 @@ export function ServicesGuide() {
             </h1>
             <p className="cover-subtitle">
               Premium creative assets that increase trust, improve conversions, and elevate your online presence. Tailored for scale-ready e-commerce brands.
+            </p>
+            <p className="cover-philosophy">
+              Every project is unique. We provide tailored proposals based on your goals, scope, and timeline. Retainer plans are available for brands seeking ongoing creative support.
             </p>
             <div className="cover-actions">
               <button onClick={() => scrollToSlide(1)} className="btn btn-primary btn-explore">
@@ -153,53 +156,19 @@ export function ServicesGuide() {
                   <h3 className="slide-title-sm">Amazon Marketplace</h3>
                   <p className="section-subtitle-sm">Premium listing graphics and brand store storefront designs.</p>
                 </div>
-                <div className="table-container">
-                  <table className="editorial-table">
-                    <thead>
-                      <tr>
-                        <th style={{ width: "35%" }}>Service</th>
-                        <th style={{ width: "40%" }}>Includes</th>
-                        <th style={{ width: "25%", textAlign: "right" }}>Starting From</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="td-bold">Amazon Listing (7 Images)</td>
-                        <td>Hero, infographics, lifestyle, comparison</td>
-                        <td className="td-price">₹10,000</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Amazon Listing (5 Images)</td>
-                        <td>Essential listing package</td>
-                        <td className="td-price">₹7,500</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Single Listing Image</td>
-                        <td>Premium conversion visual</td>
-                        <td className="td-price">₹1,800</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Amazon A+ Content</td>
-                        <td>Premium A+ modules</td>
-                        <td className="td-price">₹8,000</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Brand Store Design</td>
-                        <td>Storefront UI &amp; pages</td>
-                        <td className="td-price">₹25,000</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Amazon Store Banner</td>
-                        <td>Premium storefront banner</td>
-                        <td className="td-price">₹3,500</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Amazon Brand Story</td>
-                        <td>Brand Story module</td>
-                        <td className="td-price">₹5,000</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div className="service-overview">
+                  <h4 className="overview-title">What's Included</h4>
+                  <ul className="overview-list">
+                    <li>Custom Hero &amp; main listing visual assets</li>
+                    <li>Conversion-focused infographics &amp; product layouts</li>
+                    <li>Custom A+ Content (Enhanced Brand Content) modules</li>
+                    <li>Complete Brand Store design &amp; category page layout</li>
+                    <li>Premium Storefront Banners &amp; brand story graphics</li>
+                  </ul>
+                  <div className="proposal-nudge">
+                    <p className="nudge-text">Every project is unique. After understanding your requirements, we'll prepare a tailored proposal outlining deliverables, timeline, and investment.</p>
+                    <button onClick={() => scrollToSlide(7)} className="btn btn-sm btn-outline nudge-btn">Request Proposal</button>
+                  </div>
                 </div>
               </div>
 
@@ -208,33 +177,18 @@ export function ServicesGuide() {
                   <h3 className="slide-title-sm">Fashion &amp; Myntra</h3>
                   <p className="section-subtitle-sm">Apparel listing graphics and visual showcases.</p>
                 </div>
-                <div className="table-container">
-                  <table className="editorial-table">
-                    <thead>
-                      <tr>
-                        <th style={{ width: "35%" }}>Service</th>
-                        <th style={{ width: "40%" }}>Includes</th>
-                        <th style={{ width: "25%", textAlign: "right" }}>Starting From</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="td-bold">Myntra Listing (5 Images)</td>
-                        <td>Complete fashion listing catalog</td>
-                        <td className="td-price">₹7,500</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Fashion Product Video (8-10s)</td>
-                        <td>Premium AI product showcase</td>
-                        <td className="td-price">₹4,500</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Apparel Lifestyle Image</td>
-                        <td>Premium lifestyle visual composite</td>
-                        <td className="td-price">₹2,000</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div className="service-overview">
+                  <h4 className="overview-title">What's Included</h4>
+                  <ul className="overview-list">
+                    <li>High-end catalog listing visual sets</li>
+                    <li>AI-assisted product model photoshoot composites</li>
+                    <li>Cinematic product showcase videos (8–10s reels)</li>
+                    <li>Premium apparel lifestyle visual assets</li>
+                  </ul>
+                  <div className="proposal-nudge">
+                    <p className="nudge-text">Every project is unique. After understanding your requirements, we'll prepare a tailored proposal outlining deliverables, timeline, and investment.</p>
+                    <button onClick={() => scrollToSlide(7)} className="btn btn-sm btn-outline nudge-btn">Request Proposal</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -256,53 +210,19 @@ export function ServicesGuide() {
                   <h3 className="slide-title-sm">Photography &amp; AI Visuals</h3>
                   <p className="section-subtitle-sm">Environmental composites and studio product renderings.</p>
                 </div>
-                <div className="table-container">
-                  <table className="editorial-table">
-                    <thead>
-                      <tr>
-                        <th style={{ width: "35%" }}>Service</th>
-                        <th style={{ width: "40%" }}>Includes</th>
-                        <th style={{ width: "25%", textAlign: "right" }}>Starting From</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="td-bold">AI Product Photoshoot</td>
-                        <td>10 premium commercial renders</td>
-                        <td className="td-price">₹8,000</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Product Hero Image</td>
-                        <td>Studio-quality hero render</td>
-                        <td className="td-price">₹2,500</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Lifestyle Composite</td>
-                        <td>Realistic lifestyle composition</td>
-                        <td className="td-price">₹2,500</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Product Infographic</td>
-                        <td>Benefits &amp; feature infographic</td>
-                        <td className="td-price">₹2,000</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Comparison Chart</td>
-                        <td>Premium comparison visual</td>
-                        <td className="td-price">₹2,000</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Product Retouching</td>
-                        <td>Professional cleanup &amp; enhancement</td>
-                        <td className="td-price">₹1,000</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Label Enhancement</td>
-                        <td>Premium label refinishing</td>
-                        <td className="td-price">₹2,000</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div className="service-overview">
+                  <h4 className="overview-title">What's Included</h4>
+                  <ul className="overview-list">
+                    <li>Advanced AI commercial product photoshoots</li>
+                    <li>Environmental lifestyle composite rendering</li>
+                    <li>Product Hero visuals &amp; detail closeups</li>
+                    <li>Benefits, comparison, &amp; feature infographics</li>
+                    <li>Professional product retouching &amp; label enhancement</li>
+                  </ul>
+                  <div className="proposal-nudge">
+                    <p className="nudge-text">Every project is unique. After understanding your requirements, we'll prepare a tailored proposal outlining deliverables, timeline, and investment.</p>
+                    <button onClick={() => scrollToSlide(7)} className="btn btn-sm btn-outline nudge-btn">Request Proposal</button>
+                  </div>
                 </div>
               </div>
 
@@ -311,33 +231,18 @@ export function ServicesGuide() {
                   <h3 className="slide-title-sm">Product Videos</h3>
                   <p className="section-subtitle-sm">Immersive scroll-stopping motion media for digital platforms.</p>
                 </div>
-                <div className="table-container">
-                  <table className="editorial-table">
-                    <thead>
-                      <tr>
-                        <th style={{ width: "35%" }}>Service</th>
-                        <th style={{ width: "40%" }}>Includes</th>
-                        <th style={{ width: "25%", textAlign: "right" }}>Starting From</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="td-bold">Product Commercial</td>
-                        <td>15–30s premium retail ad spot</td>
-                        <td className="td-price">₹12,000</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Product Showcase Video</td>
-                        <td>8–15s feature highlight clip</td>
-                        <td className="td-price">₹6,000</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Social Product Reel</td>
-                        <td>Short-form scroll-stopping reel</td>
-                        <td className="td-price">₹5,000</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div className="service-overview">
+                  <h4 className="overview-title">What's Included</h4>
+                  <ul className="overview-list">
+                    <li>Cinema-grade commercial spots (15–30s)</li>
+                    <li>Immersive product feature highlights (8–15s)</li>
+                    <li>High-impact short-form social reels &amp; clips</li>
+                    <li>Scripting, creative direction, &amp; motion graphics</li>
+                  </ul>
+                  <div className="proposal-nudge">
+                    <p className="nudge-text">Every project is unique. After understanding your requirements, we'll prepare a tailored proposal outlining deliverables, timeline, and investment.</p>
+                    <button onClick={() => scrollToSlide(7)} className="btn btn-sm btn-outline nudge-btn">Request Proposal</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -359,43 +264,18 @@ export function ServicesGuide() {
                   <h3 className="slide-title-sm">Website &amp; Shopify</h3>
                   <p className="section-subtitle-sm">High-performance custom storefront layouts and UI assets.</p>
                 </div>
-                <div className="table-container">
-                  <table className="editorial-table">
-                    <thead>
-                      <tr>
-                        <th style={{ width: "35%" }}>Service</th>
-                        <th style={{ width: "40%" }}>Includes</th>
-                        <th style={{ width: "25%", textAlign: "right" }}>Starting From</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="td-bold">Homepage Hero Banner</td>
-                        <td>Premium homepage hero section</td>
-                        <td className="td-price">₹5,000</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Website Banner</td>
-                        <td>Promotional web header banner</td>
-                        <td className="td-price">₹3,500</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Landing Page Design</td>
-                        <td>Complete high-converting layout</td>
-                        <td className="td-price">₹15,000</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Homepage Design</td>
-                        <td>Homepage interface design</td>
-                        <td className="td-price">₹12,000</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Shopify Website Design</td>
-                        <td>Complete storefront build setup</td>
-                        <td className="td-price">Starting at ₹45,000</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div className="service-overview">
+                  <h4 className="overview-title">What's Included</h4>
+                  <ul className="overview-list">
+                    <li>Custom homepage interface design &amp; layouts</li>
+                    <li>Custom landing pages optimized for marketing campaigns</li>
+                    <li>Premium storefront banners &amp; promotional banners</li>
+                    <li>Full Shopify theme setup, customization, &amp; store launch</li>
+                  </ul>
+                  <div className="proposal-nudge">
+                    <p className="nudge-text">Every project is unique. After understanding your requirements, we'll prepare a tailored proposal outlining deliverables, timeline, and investment.</p>
+                    <button onClick={() => scrollToSlide(7)} className="btn btn-sm btn-outline nudge-btn">Request Proposal</button>
+                  </div>
                 </div>
               </div>
 
@@ -404,59 +284,79 @@ export function ServicesGuide() {
                   <h3 className="slide-title-sm">Branding &amp; Social Media</h3>
                   <p className="section-subtitle-sm">Custom mockups, brand assets, and organic carousels.</p>
                 </div>
-                <div className="table-container">
-                  <table className="editorial-table">
-                    <thead>
-                      <tr>
-                        <th style={{ width: "35%" }}>Service</th>
-                        <th style={{ width: "40%" }}>Includes</th>
-                        <th style={{ width: "25%", textAlign: "right" }}>Starting From</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="td-bold">Social Media Creative</td>
-                        <td>Single premium social post design</td>
-                        <td className="td-price">₹1,500</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Instagram Carousel</td>
-                        <td>Up to 10 slide custom deck</td>
-                        <td className="td-price">₹5,000</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">LinkedIn Carousel</td>
-                        <td>Educational slide carousel deck</td>
-                        <td className="td-price">₹5,000</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Product Launch Creative</td>
-                        <td>Launch announcement graphics</td>
-                        <td className="td-price">₹3,000</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Packaging Mockup</td>
-                        <td>Premium packaging layout model</td>
-                        <td className="td-price">₹2,000</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">AI Ad Creative</td>
-                        <td>Paid advertisement ad asset</td>
-                        <td className="td-price">₹2,000</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div className="service-overview">
+                  <h4 className="overview-title">What's Included</h4>
+                  <ul className="overview-list">
+                    <li>High-conversion social creative and advertising assets</li>
+                    <li>Interactive Instagram carousel design packages</li>
+                    <li>Thought-leadership LinkedIn educational decks</li>
+                    <li>Brand launch creatives &amp; marketing campaign assets</li>
+                    <li>Realistic 3D packaging mockups &amp; label presentation</li>
+                  </ul>
+                  <div className="proposal-nudge">
+                    <p className="nudge-text">Every project is unique. After understanding your requirements, we'll prepare a tailored proposal outlining deliverables, timeline, and investment.</p>
+                    <button onClick={() => scrollToSlide(7)} className="btn btn-sm btn-outline nudge-btn">Request Proposal</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Slide 9: Monthly Partnerships */}
+        {/* Slide 5: How Pricing Works */}
+        <section className="slide slide-pricing-philosophy" id="pricing-works">
+          <div className="slide-content">
+            <div className="grid grid-2">
+              <div className="col col-left">
+                <span className="slide-num">05 / PHILOSOPHY</span>
+                <h2 className="slide-title">How Pricing Works</h2>
+                <p className="section-subtitle">
+                  We believe every brand deserves a solution tailored to its goals rather than a one-size-fits-all package. Every project is quoted individually to match your unique brand requirements.
+                </p>
+              </div>
+              <div className="col col-right border-left-editorial">
+                <h3 className="subsection-title">Our Pricing Framework</h3>
+                <p className="body-text" style={{ marginBottom: "1.5rem" }}>
+                  Every custom proposal is calculated transparently based on the following scope dimensions:
+                </p>
+                <ul className="philosophy-list">
+                  <li>
+                    <strong>Scope of Work:</strong> The breadth of channels, platforms, and assets to be addressed.
+                  </li>
+                  <li>
+                    <strong>Number of Deliverables:</strong> The precise volume of images, videos, or designs required.
+                  </li>
+                  <li>
+                    <strong>Creative Complexity:</strong> The depth of AI compositions, custom mockups, or CGI.
+                  </li>
+                  <li>
+                    <strong>Timeline:</strong> Speed of turnaround and priority delivery requirements.
+                  </li>
+                  <li>
+                    <strong>Commercial Usage:</strong> Licensing terms for organic usage versus paid ad creatives.
+                  </li>
+                  <li>
+                    <strong>Partnership Term:</strong> Ongoing support requirements and volume-based relationships.
+                  </li>
+                </ul>
+                <div className="philosophy-conclusion">
+                  <p>
+                    <em>We believe every brand deserves a solution tailored to its goals rather than a one-size-fits-all package.</em>
+                  </p>
+                  <button onClick={() => scrollToSlide(7)} className="btn btn-primary" style={{ marginTop: "2rem" }}>
+                    Request a Proposal
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Slide 6: Monthly Partnerships */}
         <section className="slide slide-pricing" id="partnerships">
           <div className="slide-content">
             <div className="section-header">
-              <span className="slide-num">08 / SCALING</span>
+              <span className="slide-num">06 / SCALING</span>
               <h2 className="slide-title">Monthly Partnerships</h2>
               <p className="section-subtitle">Establish an ongoing workflow and secure recurring priority service slots.</p>
             </div>
@@ -500,7 +400,7 @@ export function ServicesGuide() {
                     <span>2 Revision Rounds</span>
                   </li>
                 </ul>
-                <button onClick={() => scrollToSlide(6)} className="btn btn-outline card-btn">Inquire Starter</button>
+                <button onClick={() => scrollToSlide(7)} className="btn btn-outline card-btn">Inquire Starter</button>
               </div>
 
               {/* Growth Tier (Featured) */}
@@ -548,7 +448,7 @@ export function ServicesGuide() {
                     <span>Priority Delivery</span>
                   </li>
                 </ul>
-                <button onClick={() => scrollToSlide(6)} className="btn btn-primary card-btn">Inquire Growth</button>
+                <button onClick={() => scrollToSlide(7)} className="btn btn-primary card-btn">Inquire Growth</button>
               </div>
 
               {/* Brand Partner Tier */}
@@ -595,19 +495,19 @@ export function ServicesGuide() {
                     <span>Fastest Turnaround &amp; Priority Support</span>
                   </li>
                 </ul>
-                <button onClick={() => scrollToSlide(6)} className="btn btn-outline card-btn">Inquire Partner</button>
+                <button onClick={() => scrollToSlide(7)} className="btn btn-outline card-btn">Inquire Partner</button>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Slide 10: Process & Add-ons */}
+        {/* Slide 7: Process & Add-ons */}
         <section className="slide slide-process" id="process">
           <div className="slide-content">
             <div className="grid grid-2">
               {/* Column Left: Process */}
               <div className="col col-left">
-                <span className="slide-num">09 / WORKFLOW</span>
+                <span className="slide-num">07 / WORKFLOW</span>
                 <h2 className="slide-title">Our Process</h2>
                 <div className="process-steps">
                   {/* Step 1 */}
@@ -738,13 +638,13 @@ export function ServicesGuide() {
           </div>
         </section>
 
-        {/* Slide 11: FAQ & Contact */}
+        {/* Slide 8: FAQ & Contact */}
         <section className="slide slide-contact" id="contact">
           <div className="slide-content">
             <div className="grid grid-2">
               {/* Column Left: FAQs */}
               <div className="col col-left">
-                <span className="slide-num">10 / FAQ</span>
+                <span className="slide-num">08 / FAQ</span>
                 <h2 className="slide-title">Frequently Asked Questions</h2>
 
                 <div className="faq-container">
@@ -787,59 +687,41 @@ export function ServicesGuide() {
 
               {/* Column Right: Contact Card */}
               <div className="col col-right border-left-editorial">
-                <span className="slide-num">GET IN TOUCH</span>
-                <h2 className="slide-title" style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>Prafful's AI-Powered Studio</h2>
-                <p className="body-text" style={{ marginBottom: "2rem" }}>AI-Powered Creative Solutions for Modern E-commerce Brands</p>
+                <span className="slide-num">LET'S WORK TOGETHER</span>
+                <h2 className="slide-title" style={{ fontSize: "2.75rem", lineHeight: "1.1", marginBottom: "1.5rem" }}>
+                  Let's Build Something Exceptional
+                </h2>
+                <p className="body-text" style={{ fontSize: "1.05rem", color: "var(--color-text-muted)", marginBottom: "2.5rem", lineHeight: "1.6" }}>
+                  Whether you're launching a new product, refreshing your brand, or scaling your e-commerce business, we'd love to explore how we can help.
+                </p>
 
-                <div className="contact-details-box">
-                  <div className="contact-detail-item">
-                    <span className="contact-label">Email</span>
-                    <span className="contact-value">
-                      <a href="mailto:prafful.mahawar2000@gmail.com" className="hover-underline">
-                        prafful.mahawar2000@gmail.com
-                      </a>
-                    </span>
-                  </div>
-                  <div className="contact-detail-item">
-                    <span className="contact-label">Phone / WhatsApp</span>
-                    <span className="contact-value">
-                      <a href="https://wa.me/919887574517" target="_blank" rel="noopener noreferrer" className="hover-underline">
-                        +91 98875 74517
-                      </a>
-                    </span>
-                  </div>
-                  <div className="contact-detail-item">
-                    <span className="contact-label">Website</span>
-                    <span className="contact-value">
-                      <a href="https://prafful2121.github.io/my-portfolio/" target="_blank" rel="noopener noreferrer" className="hover-underline">
-                        prafful2121.github.io/my-portfolio/
-                      </a>
-                    </span>
-                  </div>
-                  <div className="contact-detail-item">
-                    <span className="contact-label">LinkedIn</span>
-                    <span className="contact-value">
-                      <a href="https://www.linkedin.com/in/praffulmahawar" target="_blank" rel="noopener noreferrer" className="hover-underline">
-                        linkedin.com/in/praffulmahawar
-                      </a>
-                    </span>
-                  </div>
-                </div>
-
-                <div className="contact-action-wrapper" style={{ marginTop: "3rem" }}>
+                <div className="cta-button-group">
+                  <a
+                    href="https://wa.me/919887574517"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary"
+                    style={{ width: "100%", justifyContent: "center", marginBottom: "1rem" }}
+                  >
+                    <span>Book a Discovery Call</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} style={{ marginLeft: "0.5rem" }}>
+                      <path d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </a>
                   <button
                     disabled={inquireState !== "idle"}
                     onClick={handleInquire}
-                    className="btn btn-primary"
-                    style={{ width: "100%" }}
+                    className="btn btn-outline"
+                    style={{ width: "100%", justifyContent: "center" }}
                   >
                     <span>
-                      {inquireState === "idle" && "Request Custom Quote Proposal"}
+                      {inquireState === "idle" && "Request a Proposal"}
                       {inquireState === "loading" && "Opening Inquiries..."}
                       {inquireState === "success" && "Proposal Request Launched"}
                     </span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} style={{ marginLeft: "0.5rem" }}>
-                      <path d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                      <polyline points="22,6 12,13 2,6" />
                     </svg>
                   </button>
                   {inquireState === "success" && (
@@ -847,6 +729,15 @@ export function ServicesGuide() {
                       ✓ Launching mail client with Prafful's Studio...
                     </p>
                   )}
+                </div>
+
+                <div className="contact-quick-links" style={{ marginTop: "2rem", borderTop: "1px solid var(--color-divider)", paddingTop: "1.5rem" }}>
+                  <p style={{ fontSize: "0.85rem", color: "var(--color-text-muted)", marginBottom: "0.5rem" }}>Or reach out directly:</p>
+                  <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", fontSize: "0.9rem" }}>
+                    <a href="mailto:prafful.mahawar2000@gmail.com" className="hover-underline" style={{ fontWeight: 600 }}>prafful.mahawar2000@gmail.com</a>
+                    <span style={{ color: "var(--color-divider)" }}>•</span>
+                    <a href="https://wa.me/919887574517" target="_blank" rel="noopener noreferrer" className="hover-underline" style={{ fontWeight: 600 }}>+91 98875 74517</a>
+                  </div>
                 </div>
               </div>
             </div>
