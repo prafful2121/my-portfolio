@@ -366,7 +366,7 @@ export function ServicesGuide() {
               <div className="pricing-card">
                 <div className="card-header">
                   <h3 className="tier-name">Starter</h3>
-                  <p className="tier-subtitle">Best for early stage brands</p>
+                  <p className="tier-subtitle">Best for early-stage brands building their online presence.</p>
                   <div className="price-container">
                     <span className="price-symbol">₹</span>
                     <span className="price-value">25,000</span>
@@ -379,27 +379,36 @@ export function ServicesGuide() {
                     <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span><strong>15</strong> Creative Designs</span>
+                    <span><strong>Up to 20</strong> Creative Assets / month</span>
                   </li>
                   <li>
                     <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span><strong>2</strong> Product Videos</span>
+                    <span>Standard turnaround</span>
                   </li>
                   <li>
                     <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Priority Support</span>
+                    <span>Priority support</span>
                   </li>
                   <li>
                     <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>2 Revision Rounds</span>
+                    <span>2 revision rounds per request</span>
+                  </li>
+                  <li>
+                    <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Monthly planning &amp; review call</span>
                   </li>
                 </ul>
+                <p className="card-footer-note">
+                  Creative assets may include product listing images, A+ Content modules, product visuals, website creatives, short-form videos, landing page sections, social media creatives, and other digital creative assets.
+                </p>
                 <button onClick={() => scrollToSlide(7)} className="btn btn-outline card-btn">Inquire Starter</button>
               </div>
 
@@ -408,7 +417,7 @@ export function ServicesGuide() {
                 <div className="featured-badge">MOST POPULAR</div>
                 <div className="card-header">
                   <h3 className="tier-name">Growth</h3>
-                  <p className="tier-subtitle">Best for scaling store traffic</p>
+                  <p className="tier-subtitle">Best for growing brands with regular marketing and product launches.</p>
                   <div className="price-container">
                     <span className="price-symbol">₹</span>
                     <span className="price-value">50,000</span>
@@ -421,33 +430,36 @@ export function ServicesGuide() {
                     <svg className="check-icon accent" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span><strong>35</strong> Creative Designs</span>
+                    <span><strong>Up to 50</strong> Creative Assets / month</span>
                   </li>
                   <li>
                     <svg className="check-icon accent" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span><strong>6</strong> Product Videos</span>
+                    <span>Faster turnaround</span>
                   </li>
                   <li>
                     <svg className="check-icon accent" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Website Banner Updates</span>
+                    <span>Priority production queue</span>
                   </li>
                   <li>
                     <svg className="check-icon accent" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Amazon Listing Updates</span>
+                    <span>Website &amp; marketplace creative support</span>
                   </li>
                   <li>
                     <svg className="check-icon accent" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Priority Delivery</span>
+                    <span>Monthly strategy &amp; planning call</span>
                   </li>
                 </ul>
+                <p className="card-footer-note">
+                  Creative assets may include product listing images, A+ Content modules, product visuals, website creatives, short-form videos, landing page sections, social media creatives, and other digital creative assets.
+                </p>
                 <button onClick={() => scrollToSlide(7)} className="btn btn-primary card-btn">Inquire Growth</button>
               </div>
 
@@ -455,8 +467,9 @@ export function ServicesGuide() {
               <div className="pricing-card">
                 <div className="card-header">
                   <h3 className="tier-name">Brand Partner</h3>
-                  <p className="tier-subtitle">Full scale creative partner</p>
+                  <p className="tier-subtitle">Best for brands seeking a dedicated long-term creative partner.</p>
                   <div className="price-container">
+                    <span style={{ fontSize: "0.9rem", textTransform: "none", fontWeight: 400, color: "var(--color-text-muted)", marginRight: "6px" }}>Starting at</span>
                     <span className="price-symbol">₹</span>
                     <span className="price-value">90,000</span>
                     <span className="price-period">/ month</span>
@@ -468,170 +481,134 @@ export function ServicesGuide() {
                     <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Dedicated Creative Partner</span>
+                    <span>Unlimited Creative Assets (Fair Usage)</span>
                   </li>
                   <li>
                     <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Unlimited Design Requests (Fair Usage)</span>
+                    <span>Dedicated creative partner</span>
                   </li>
                   <li>
                     <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Product Launch Campaigns</span>
+                    <span>Highest priority queue</span>
                   </li>
                   <li>
                     <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Marketplace, Web &amp; Social Assets</span>
+                    <span>Fastest turnaround</span>
                   </li>
                   <li>
                     <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Fastest Turnaround &amp; Priority Support</span>
+                    <span>Monthly strategy &amp; planning sessions</span>
                   </li>
                 </ul>
+                <p className="card-footer-note">
+                  Creative assets may include product listing images, A+ Content modules, product visuals, website creatives, short-form videos, landing page sections, social media creatives, and other digital creative assets.
+                </p>
                 <button onClick={() => scrollToSlide(7)} className="btn btn-outline card-btn">Inquire Partner</button>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Slide 7: Process & Add-ons */}
+        {/* Slide 7: Our Process */}
         <section className="slide slide-process" id="process">
           <div className="slide-content">
-            <div className="grid grid-2">
-              {/* Column Left: Process */}
-              <div className="col col-left">
+            <div className="process-layout-centered">
+              <div className="process-header-wrapper" style={{ marginBottom: "2rem" }}>
                 <span className="slide-num">07 / WORKFLOW</span>
                 <h2 className="slide-title">Our Process</h2>
-                <div className="process-steps">
-                  {/* Step 1 */}
-                  <div
-                    onClick={() => setActiveStep(1)}
-                    onMouseEnter={() => {
-                      if (window.innerWidth >= 1024) setActiveStep(1);
-                    }}
-                    className={`process-step-item ${activeStep === 1 ? "active" : ""}`}
-                  >
-                    <div className="step-header">
-                      <span className="step-num-circle">01</span>
-                      <h3 className="step-name">Discovery</h3>
-                    </div>
-                    <div className="step-content">
-                      <p>Understanding your product, audience, and goals.</p>
-                    </div>
+              </div>
+              <div className="process-steps">
+                {/* Step 1 */}
+                <div
+                  onClick={() => setActiveStep(1)}
+                  onMouseEnter={() => {
+                    if (window.innerWidth >= 1024) setActiveStep(1);
+                  }}
+                  className={`process-step-item ${activeStep === 1 ? "active" : ""}`}
+                >
+                  <div className="step-header">
+                    <span className="step-num-circle">01</span>
+                    <h3 className="step-name">Discovery</h3>
                   </div>
-
-                  {/* Step 2 */}
-                  <div
-                    onClick={() => setActiveStep(2)}
-                    onMouseEnter={() => {
-                      if (window.innerWidth >= 1024) setActiveStep(2);
-                    }}
-                    className={`process-step-item ${activeStep === 2 ? "active" : ""}`}
-                  >
-                    <div className="step-header">
-                      <span className="step-num-circle">02</span>
-                      <h3 className="step-name">Creative Direction</h3>
-                    </div>
-                    <div className="step-content">
-                      <p>Planning the visual style and messaging.</p>
-                    </div>
-                  </div>
-
-                  {/* Step 3 */}
-                  <div
-                    onClick={() => setActiveStep(3)}
-                    onMouseEnter={() => {
-                      if (window.innerWidth >= 1024) setActiveStep(3);
-                    }}
-                    className={`process-step-item ${activeStep === 3 ? "active" : ""}`}
-                  >
-                    <div className="step-header">
-                      <span className="step-num-circle">03</span>
-                      <h3 className="step-name">Production</h3>
-                    </div>
-                    <div className="step-content">
-                      <p>Designing premium, conversion-focused creative assets.</p>
-                    </div>
-                  </div>
-
-                  {/* Step 4 */}
-                  <div
-                    onClick={() => setActiveStep(4)}
-                    onMouseEnter={() => {
-                      if (window.innerWidth >= 1024) setActiveStep(4);
-                    }}
-                    className={`process-step-item ${activeStep === 4 ? "active" : ""}`}
-                  >
-                    <div className="step-header">
-                      <span className="step-num-circle">04</span>
-                      <h3 className="step-name">Revisions</h3>
-                    </div>
-                    <div className="step-content">
-                      <p>Refining based on your feedback.</p>
-                    </div>
-                  </div>
-
-                  {/* Step 5 */}
-                  <div
-                    onClick={() => setActiveStep(5)}
-                    onMouseEnter={() => {
-                      if (window.innerWidth >= 1024) setActiveStep(5);
-                    }}
-                    className={`process-step-item ${activeStep === 5 ? "active" : ""}`}
-                  >
-                    <div className="step-header">
-                      <span className="step-num-circle">05</span>
-                      <h3 className="step-name">Delivery</h3>
-                    </div>
-                    <div className="step-content">
-                      <p>Final assets delivered in the required formats.</p>
-                    </div>
+                  <div className="step-content">
+                    <p>Understanding your product, audience, and goals.</p>
                   </div>
                 </div>
-              </div>
 
-              {/* Column Right: Add-ons */}
-              <div className="col col-right border-left-editorial">
-                <span className="slide-num">OPTIONAL ENHANCEMENTS</span>
-                <h3 className="subsection-title">Add-ons</h3>
-                <div className="table-container add-ons-wrapper">
-                  <table className="editorial-table select-table">
-                    <thead>
-                      <tr>
-                        <th>Service</th>
-                        <th style={{ textAlign: "right" }}>Starting From</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="td-bold">Additional Listing Image</td>
-                        <td className="td-price">₹1,500</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Additional Video Edit</td>
-                        <td className="td-price">₹2,000</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Extra Revision Round</td>
-                        <td className="td-price">₹500</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Rush Delivery (24 Hours)</td>
-                        <td className="td-price">+30%</td>
-                      </tr>
-                      <tr>
-                        <td className="td-bold">Source Files (when applicable)</td>
-                        <td className="td-price">₹2,000</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                {/* Step 2 */}
+                <div
+                  onClick={() => setActiveStep(2)}
+                  onMouseEnter={() => {
+                    if (window.innerWidth >= 1024) setActiveStep(2);
+                  }}
+                  className={`process-step-item ${activeStep === 2 ? "active" : ""}`}
+                >
+                  <div className="step-header">
+                    <span className="step-num-circle">02</span>
+                    <h3 className="step-name">Creative Direction</h3>
+                  </div>
+                  <div className="step-content">
+                    <p>Planning the visual style and messaging.</p>
+                  </div>
+                </div>
+
+                {/* Step 3 */}
+                <div
+                  onClick={() => setActiveStep(3)}
+                  onMouseEnter={() => {
+                    if (window.innerWidth >= 1024) setActiveStep(3);
+                  }}
+                  className={`process-step-item ${activeStep === 3 ? "active" : ""}`}
+                >
+                  <div className="step-header">
+                    <span className="step-num-circle">03</span>
+                    <h3 className="step-name">Production</h3>
+                  </div>
+                  <div className="step-content">
+                    <p>Designing premium, conversion-focused creative assets.</p>
+                  </div>
+                </div>
+
+                {/* Step 4 */}
+                <div
+                  onClick={() => setActiveStep(4)}
+                  onMouseEnter={() => {
+                    if (window.innerWidth >= 1024) setActiveStep(4);
+                  }}
+                  className={`process-step-item ${activeStep === 4 ? "active" : ""}`}
+                >
+                  <div className="step-header">
+                    <span className="step-num-circle">04</span>
+                    <h3 className="step-name">Revisions</h3>
+                  </div>
+                  <div className="step-content">
+                    <p>Refining based on your feedback.</p>
+                  </div>
+                </div>
+
+                {/* Step 5 */}
+                <div
+                  onClick={() => setActiveStep(5)}
+                  onMouseEnter={() => {
+                    if (window.innerWidth >= 1024) setActiveStep(5);
+                  }}
+                  className={`process-step-item ${activeStep === 5 ? "active" : ""}`}
+                >
+                  <div className="step-header">
+                    <span className="step-num-circle">05</span>
+                    <h3 className="step-name">Delivery</h3>
+                  </div>
+                  <div className="step-content">
+                    <p>Final assets delivered in the required formats.</p>
+                  </div>
                 </div>
               </div>
             </div>

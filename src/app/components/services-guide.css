@@ -1336,3 +1336,28 @@
   }
 }
 
+/* Card Footnote and Centered Process Layout Styles */
+.services-guide-page .card-footer-note {
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--color-text-muted);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-top: 1px solid var(--color-divider);
+  padding-top: 1rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.services-guide-page .process-layout-centered {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.services-guide-page .process-layout-centered .process-steps {
+  margin-top: 2rem;
+}
+
+
