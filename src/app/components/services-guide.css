@@ -123,6 +123,15 @@
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  transition: padding var(--transition-smooth), background-color var(--transition-smooth), border-bottom var(--transition-smooth);
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.services-guide-page .header.scrolled {
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-divider);
+  padding: 1.15rem var(--spacing-outer);
 }
 
 .services-guide-page .logo {
@@ -900,6 +909,10 @@
 @media (min-width: 1024px) {
   .services-guide-page .deck-footer {
     position: fixed; /* Keep viewport sticky on desktop */
+  }
+
+  .services-guide-page .header {
+    position: fixed;
   }
 }
 

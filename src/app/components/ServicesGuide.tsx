@@ -92,7 +92,7 @@ export function ServicesGuide() {
   return (
     <div className="services-guide-page">
       {/* Top Navigation Bar */}
-      <header className="header">
+      <header className={`header ${currentSlide > 0 ? "scrolled" : ""}`}>
         <a href="/" className="logo cursor-pointer">
           <span className="logo-bold">PRAFFUL'S</span>
           <span className="logo-light">AI-POWERED STUDIO</span>
