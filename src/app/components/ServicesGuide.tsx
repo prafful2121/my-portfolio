@@ -2,6 +2,17 @@ import { useState, useEffect } from "react";
 import "./services-guide.css";
 
 export function ServicesGuide() {
+  const slideTitles = [
+    "Cover",
+    "Marketplace Solutions",
+    "Content Production",
+    "Brand & Store Identity",
+    "How Pricing Works",
+    "Monthly Partnerships",
+    "Our Process",
+    "FAQs & Contact"
+  ];
+
   const [activeStep, setActiveStep] = useState(1);
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -721,6 +732,50 @@ export function ServicesGuide() {
           </div>
         </section>
       </main>
+
+      {/* Desktop Vertical Side Navigation */}
+      <nav className="deck-side-nav">
+        <button
+          disabled={currentSlide === 0}
+          onClick={() => scrollToSlide(currentSlide - 1)}
+          className="side-nav-btn up-btn"
+          aria-label="Previous Slide"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}>
+            <path d="M18 15l-6-6-6 6" />
+          </svg>
+        </button>
+
+        <div className="side-nav-dots">
+          {Array.from({ length: totalSlides }).map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => scrollToSlide(idx)}
+              className={`side-nav-dot ${currentSlide === idx ? "active" : ""}`}
+              aria-label={`Go to slide ${idx + 1}`}
+            >
+              <span className="dot-tooltip">{slideTitles[idx]}</span>
+            </button>
+          ))}
+        </div>
+
+        <div className="side-nav-numbers">
+          <span className="current">{String(currentSlide + 1).padStart(2, "0")}</span>
+          <span className="separator">/</span>
+          <span className="total">{String(totalSlides).padStart(2, "0")}</span>
+        </div>
+
+        <button
+          disabled={currentSlide === totalSlides - 1}
+          onClick={() => scrollToSlide(currentSlide + 1)}
+          className="side-nav-btn down-btn"
+          aria-label="Next Slide"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}>
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </button>
+      </nav>
 
       {/* Global Sticky Deck Footer */}
       <footer className="deck-footer">
