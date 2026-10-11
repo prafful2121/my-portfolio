@@ -2,12 +2,23 @@ import { useEffect, useRef } from "react";
 import { ScrollReveal } from "./ui/ScrollReveal";
 import { GlassOrb, ChromeLiquid, GoldSculpture } from "./ui/AbstractArt";
 import { MapPin } from "lucide-react";
-import paxonLogo from "../../assets/paxon-logo.png";
-import paxonLogo2x from "../../assets/paxon-logo-2x.png";
+import animatedLogoVideo from "../../assets/animated-logo.mp4";
+import animatedLogoPoster from "../../assets/animated-logo-poster.webp";
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const logo3DRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Auto-play enforcement for mobile and safari compliance
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.play().catch(() => {});
+    }
+  }, []);
 
   // High-performance 3D controller via direct DOM manipulation (bypasses React renders for 60fps)
   useEffect(() => {
@@ -138,22 +149,26 @@ export function Hero() {
                   }}
                 >
                   <div className="relative animate-logo-float">
-                    <img
-                      src={paxonLogo2x}
-                      srcSet={`${paxonLogo} 1x, ${paxonLogo2x} 2x`}
-                      alt="PAXON STUDIO"
-                      width={897}
-                      height={410}
-                      className="w-full h-auto object-contain select-none pointer-events-none"
+                    <video
+                      ref={videoRef}
+                      src={animatedLogoVideo}
+                      poster={animatedLogoPoster}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      preload="auto"
+                      aria-label="PAXON STUDIO Animated 3D Logo"
+                      className="w-full h-auto object-contain select-none pointer-events-none rounded-2xl"
                       style={{
                         transform: "translateZ(30px)",
                         backfaceVisibility: "hidden",
                         WebkitBackfaceVisibility: "hidden",
-                        imageRendering: "auto",
-                        filter: "drop-shadow(0 12px 24px rgba(17,17,17,0.08)) drop-shadow(0 2px 6px rgba(0,0,0,0.04))",
+                        filter: "drop-shadow(0 14px 28px rgba(17,17,17,0.08)) drop-shadow(0 2px 6px rgba(0,0,0,0.04))",
+                        mixBlendMode: "multiply",
+                        maskImage: "radial-gradient(ellipse 96% 92% at 50% 55%, black 75%, transparent 100%)",
+                        WebkitMaskImage: "radial-gradient(ellipse 96% 92% at 50% 55%, black 75%, transparent 100%)",
                       }}
-                      loading="eager"
-                      decoding="async"
                     />
                   </div>
                 </div>
