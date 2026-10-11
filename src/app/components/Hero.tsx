@@ -3,6 +3,7 @@ import { ScrollReveal } from "./ui/ScrollReveal";
 import { GlassOrb, ChromeLiquid, GoldSculpture } from "./ui/AbstractArt";
 import { MapPin } from "lucide-react";
 import paxonLogo from "../../assets/paxon-logo.png";
+import paxonLogo2x from "../../assets/paxon-logo-2x.png";
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -54,21 +55,22 @@ export function Hero() {
 
       if (isHovered) {
         const rect = container.getBoundingClientRect();
-        // Restrained, premium mouse tilt (up to 8° Y, 6° X)
-        targetY = (mouseX / (rect.width / 2)) * 8;
-        targetX = -(mouseY / (rect.height / 2)) * 6 + scrollTiltX;
+        // Dynamic, responsive 3D mouse tilt (up to 18° Y, 14° X) with hover elevation
+        targetY = (mouseX / (rect.width / 2)) * 18;
+        targetX = -(mouseY / (rect.height / 2)) * 14 + scrollTiltX;
       } else {
         // Subtle ambient resting sway (up to 2° X, 4° Y)
         targetX = Math.sin(elapsed * 0.9) * 2 + scrollTiltX;
         targetY = Math.cos(elapsed * 0.7) * 4;
       }
 
-      // Smooth spring interpolation (lerp)
-      currentX += (targetX - currentX) * 0.05;
-      currentY += (targetY - currentY) * 0.05;
+      // Smooth spring interpolation (lerp) — snappy 0.08 for responsive cursor tracking
+      currentX += (targetX - currentX) * 0.08;
+      currentY += (targetY - currentY) * 0.08;
 
       // Apply transform directly to GPU compositor thread
-      logo3D.style.transform = `rotateX(${currentX.toFixed(2)}deg) rotateY(${currentY.toFixed(2)}deg)`;
+      const elevationZ = isHovered ? 25 : 0;
+      logo3D.style.transform = `translateZ(${elevationZ}px) rotateX(${currentX.toFixed(2)}deg) rotateY(${currentY.toFixed(2)}deg)`;
 
       animFrame = requestAnimationFrame(update3D);
     };
@@ -85,7 +87,7 @@ export function Hero() {
   return (
     <section
       id="work"
-      className="relative min-h-screen flex items-center overflow-hidden pt-36 sm:pt-40 lg:pt-32 pb-20"
+      className="relative min-h-screen flex items-center overflow-hidden pt-32 sm:pt-36 lg:pt-28 pb-16"
       style={{ background: "#F8F8F6" }}
     >
       {/* Background 3D Abstract Shapes with parallax floating motion */}
@@ -101,14 +103,14 @@ export function Hero() {
         />
       </div>
 
-      <div className="max-w-[1280px] mx-auto px-6 sm:px-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center relative z-10">
+      <div className="max-w-[1280px] mx-auto px-6 sm:px-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center lg:items-start relative z-10">
         {/* Left — PAXON STUDIO 3D Brand Anchor: dominates 7 cols */}
-        <div className="lg:col-span-7 relative flex flex-col items-center lg:items-start -mt-4 sm:-mt-6 lg:-mt-8">
+        <div className="lg:col-span-7 relative flex flex-col items-center lg:items-start lg:pt-1.5">
           <ScrollReveal variant="fade-in" duration={1200} className="relative z-10 w-full">
             {/* Hover-tilt and scroll-responsive 3D logo container */}
             <div
               ref={containerRef}
-              className="relative select-none w-full max-w-[500px] sm:max-w-[580px] lg:max-w-[700px] xl:max-w-[740px]"
+              className="relative select-none w-full max-w-[500px] sm:max-w-[580px] lg:max-w-[680px] xl:max-w-[720px] cursor-pointer"
               style={{
                 perspective: "1200px",
               }}
@@ -118,6 +120,7 @@ export function Hero() {
                 style={{
                   transformStyle: "preserve-3d",
                   transform: "rotateX(0deg) rotateY(0deg)",
+                  willChange: "transform",
                 }}
                 className="relative z-10 transition-transform duration-100 ease-out"
               >
@@ -127,7 +130,7 @@ export function Hero() {
                   style={{ transform: "translateZ(-20px)" }}
                 />
 
-                {/* Main 3D Brand Logo — crisp high-resolution master asset */}
+                {/* Main 3D Brand Logo — ultra-crisp high-resolution master asset */}
                 <div 
                   className="relative animate-logo-entrance"
                   style={{
@@ -136,14 +139,18 @@ export function Hero() {
                 >
                   <div className="relative animate-logo-float">
                     <img
-                      src={paxonLogo}
+                      src={paxonLogo2x}
+                      srcSet={`${paxonLogo} 1x, ${paxonLogo2x} 2x`}
                       alt="PAXON STUDIO"
                       width={897}
                       height={410}
                       className="w-full h-auto object-contain select-none pointer-events-none"
                       style={{
                         transform: "translateZ(30px)",
-                        filter: "drop-shadow(0 10px 20px rgba(17,17,17,0.08)) drop-shadow(0 2px 5px rgba(0,0,0,0.04))",
+                        backfaceVisibility: "hidden",
+                        WebkitBackfaceVisibility: "hidden",
+                        imageRendering: "auto",
+                        filter: "drop-shadow(0 12px 24px rgba(17,17,17,0.08)) drop-shadow(0 2px 6px rgba(0,0,0,0.04))",
                       }}
                       loading="eager"
                       decoding="async"
@@ -154,7 +161,7 @@ export function Hero() {
             </div>
 
             {/* Tagline & Brand Identity with calibrated vertical space */}
-            <div className="mt-7 sm:mt-8 lg:mt-9 flex flex-col items-center lg:items-start w-full">
+            <div className="mt-6 sm:mt-7 lg:mt-8 flex flex-col items-center lg:items-start w-full">
               <p
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
@@ -167,7 +174,7 @@ export function Hero() {
               </p>
 
               {/* Decorative metadata */}
-              <div className="mt-3.5 flex items-center justify-center lg:justify-start gap-2 text-[10px] tracking-widest text-[#6B6B68] font-mono uppercase">
+              <div className="mt-3 flex items-center justify-center lg:justify-start gap-2 text-[10px] tracking-widest text-[#6B6B68] font-mono uppercase">
                 <MapPin size={12} className="text-[#F4C542] flex-shrink-0" />
                 <span>India</span>
               </div>
