@@ -103,14 +103,14 @@ export function Hero() {
         />
       </div>
 
-      <div className="max-w-[1280px] mx-auto px-6 sm:px-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center lg:items-start relative z-10">
-        {/* Left — PAXON STUDIO 3D Brand Anchor: dominates 7 cols, logo vertically centered with right column */}
-        <div className="lg:col-span-7 relative flex flex-col items-center lg:items-start lg:pt-16 xl:pt-20">
+      <div className="max-w-[1280px] mx-auto px-6 sm:px-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 xl:gap-20 items-center lg:items-start relative z-10">
+        {/* Left — PAXON STUDIO 3D Brand Anchor: pulled leftward to balance horizontal space */}
+        <div className="lg:col-span-7 relative flex flex-col items-center lg:items-start lg:pt-16 xl:pt-20 lg:-ml-6 xl:-ml-10">
           <ScrollReveal variant="fade-in" duration={1200} className="relative z-10 w-full">
             {/* Hover-tilt and scroll-responsive 3D logo container */}
             <div
               ref={containerRef}
-              className="relative select-none w-full max-w-[500px] sm:max-w-[580px] lg:max-w-[680px] xl:max-w-[720px] cursor-pointer"
+              className="relative select-none w-full max-w-[500px] sm:max-w-[580px] lg:max-w-[660px] xl:max-w-[700px] cursor-pointer"
               style={{
                 perspective: "1200px",
               }}
