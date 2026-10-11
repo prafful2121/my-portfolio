@@ -2,16 +2,17 @@ import { useEffect, useRef } from "react";
 import { ScrollReveal } from "./ui/ScrollReveal";
 import { GlassOrb, ChromeLiquid, GoldSculpture } from "./ui/AbstractArt";
 import { MapPin } from "lucide-react";
+import paxonLogo from "../../assets/paxon-logo.png";
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const text3DRef = useRef<HTMLDivElement>(null);
+  const logo3DRef = useRef<HTMLDivElement>(null);
 
   // High-performance 3D controller via direct DOM manipulation (bypasses React renders for 60fps)
   useEffect(() => {
     const container = containerRef.current;
-    const text3D = text3DRef.current;
-    if (!container || !text3D) return;
+    const logo3D = logo3DRef.current;
+    if (!container || !logo3D) return;
 
     let targetX = 0;
     let targetY = 0;
@@ -63,7 +64,7 @@ export function Hero() {
       currentY += (targetY - currentY) * 0.07;
 
       // Apply transform directly to GPU compositor thread
-      text3D.style.transform = `rotateX(${currentX.toFixed(2)}deg) rotateY(${currentY.toFixed(2)}deg)`;
+      logo3D.style.transform = `rotateX(${currentX.toFixed(2)}deg) rotateY(${currentY.toFixed(2)}deg)`;
 
       animFrame = requestAnimationFrame(update3D);
     };
@@ -101,67 +102,90 @@ export function Hero() {
         {/* Left — massive typography: dominates 7 cols */}
         <div className="lg:col-span-7 relative flex flex-col items-center lg:items-start">
           <ScrollReveal variant="fade-in" duration={1200} className="relative z-10 w-full">
-            {/* Hover-tilt and scroll-responsive 3D typography container */}
+            {/* Hover-tilt and scroll-responsive 3D logo container */}
             <div
               ref={containerRef}
-              className="relative select-none"
+              className="relative select-none w-full max-w-[620px] py-4"
               style={{
                 perspective: "1200px",
               }}
             >
               <div
-                ref={text3DRef}
+                ref={logo3DRef}
                 style={{
                   transformStyle: "preserve-3d",
                   transform: "rotateX(0deg) rotateY(0deg)",
                 }}
-                className="relative z-10 py-6"
+                className="relative z-10 transition-transform duration-75 ease-out"
               >
-                {/* Main 3D Preserved Text */}
-                <h1
+                {/* 3D Ambient Shadow Ground Plane */}
+                <div 
+                  className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[85%] h-8 rounded-[100%] bg-[#111111]/15 blur-xl pointer-events-none"
+                  style={{ transform: "translateZ(-30px)" }}
+                />
+
+                {/* Main 3D Brand Logo with subtle entrance and gentle ambient float */}
+                <div 
+                  className="relative animate-logo-entrance"
                   style={{
-                    fontFamily: "'Bebas Neue', sans-serif",
-                    fontSize: "clamp(80px, 11vw, 150px)",
-                    lineHeight: "0.9",
-                    letterSpacing: "0.01em",
-                    color: "#111111",
                     transformStyle: "preserve-3d",
                   }}
-                  className="font-black tracking-tight relative animate-float-slow text-center lg:text-left"
                 >
-                  <span
-                    className="block transition-all duration-300"
-                    style={{
-                      transform: "translateZ(40px)",
-                    }}
-                  >
-                    PRAFFUL'S
-                  </span>
-                  <span
-                    className="block transition-all duration-300"
-                    style={{
-                      transform: "translateZ(85px) scale(1.02)",
-                      color: "#F4C542",
-                    }}
-                  >
-                    AI-POWERED
-                  </span>
-                  <span
-                    className="block transition-all duration-300"
-                    style={{
-                      transform: "translateZ(50px)",
-                    }}
-                  >
-                    STUDIO
-                  </span>
-                </h1>
+                  <div className="relative animate-logo-float">
+                    <img
+                      src={paxonLogo}
+                      alt="PAXON STUDIO"
+                      width={897}
+                      height={410}
+                      className="w-full h-auto object-contain select-none pointer-events-none drop-shadow-[0_22px_35px_rgba(17,17,17,0.18)]"
+                      style={{
+                        transform: "translateZ(35px)",
+                        filter: "drop-shadow(0 14px 24px rgba(17,17,17,0.14)) drop-shadow(0 2px 4px rgba(0,0,0,0.06))",
+                      }}
+                      loading="eager"
+                      decoding="async"
+                    />
+
+                    {/* Non-destructive specular light sheen sweep */}
+                    <div 
+                      className="absolute inset-0 overflow-hidden pointer-events-none rounded-2xl"
+                      style={{
+                        transform: "translateZ(50px)",
+                        maskImage: `url(${paxonLogo})`,
+                        WebkitMaskImage: `url(${paxonLogo})`,
+                        maskSize: "contain",
+                        WebkitMaskSize: "contain",
+                        maskRepeat: "no-repeat",
+                        WebkitMaskRepeat: "no-repeat",
+                        maskPosition: "center",
+                        WebkitMaskPosition: "center",
+                      }}
+                    >
+                      <div className="absolute inset-y-0 w-32 bg-gradient-to-r from-transparent via-white/25 to-transparent animate-logo-shimmer" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Decorative metadata */}
-            <div className="mt-8 flex items-center justify-center lg:justify-start gap-2 text-[10px] tracking-widest text-[#6B6B68] font-mono uppercase w-full">
-              <MapPin size={12} className="text-[#F4C542] flex-shrink-0" />
-              <span>India</span>
+            {/* Tagline & Brand Identity immediately underneath */}
+            <div className="mt-4 flex flex-col items-center lg:items-start w-full">
+              <p
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  letterSpacing: "0.22em",
+                }}
+                className="text-xs sm:text-sm font-bold uppercase text-[#111111] tracking-[0.22em] flex items-center gap-2.5 text-center lg:text-left"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-[#F4C542]" />
+                PRAFFUL'S AI-POWERED STUDIO
+              </p>
+
+              {/* Decorative metadata */}
+              <div className="mt-3 flex items-center justify-center lg:justify-start gap-2 text-[10px] tracking-widest text-[#6B6B68] font-mono uppercase">
+                <MapPin size={12} className="text-[#F4C542] flex-shrink-0" />
+                <span>India</span>
+              </div>
             </div>
           </ScrollReveal>
         </div>

@@ -37,6 +37,61 @@
   animation: orb-glow 12s ease-in-out infinite;
 }
 
+/* 3D Brand Logo Animations */
+@keyframes logo-entrance {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes logo-float-ambient {
+  0%, 100% {
+    transform: translateY(0px) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotateZ(0.5deg);
+  }
+}
+
+@keyframes logo-shimmer {
+  0% {
+    transform: translateX(-150%) skewX(-25deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.7;
+  }
+  30% {
+    transform: translateX(250%) skewX(-25deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(250%) skewX(-25deg);
+    opacity: 0;
+  }
+}
+
+.animate-logo-entrance {
+  animation: logo-entrance 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-logo-float {
+  animation: logo-float-ambient 7s ease-in-out infinite;
+}
+
+.animate-logo-shimmer {
+  animation: logo-shimmer 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
 /* Hide scrollbar */
 * {
   scrollbar-width: none;
