@@ -101,11 +101,6 @@ export function Hero() {
         {/* Left — massive typography: dominates 7 cols */}
         <div className="lg:col-span-7 relative flex flex-col items-center lg:items-start">
           <ScrollReveal variant="fade-in" duration={1200} className="relative z-10 w-full">
-            <div className="text-[10px] tracking-[0.25em] text-[#6B6B68] font-bold uppercase mb-6 flex items-center justify-center lg:justify-start gap-3 w-full">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#F4C542]" />
-              Interactive Design
-            </div>
-
             {/* Hover-tilt and scroll-responsive 3D typography container */}
             <div
               ref={containerRef}
