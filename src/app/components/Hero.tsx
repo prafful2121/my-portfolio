@@ -10,13 +10,32 @@ export function Hero() {
   const logo3DRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Auto-play enforcement for mobile and safari compliance
+  // Robust mobile-first autoplay enforcement and instant decoding
   useEffect(() => {
     const video = videoRef.current;
     if (video) {
       video.muted = true;
       video.defaultMuted = true;
-      video.play().catch(() => {});
+      video.setAttribute("playsinline", "");
+      video.setAttribute("webkit-playsinline", "");
+
+      const tryPlay = () => {
+        const promise = video.play();
+        if (promise !== undefined) {
+          promise.catch(() => {
+            // First user interaction unlock if device is in low-power mode
+            const unlock = () => {
+              video.play().catch(() => {});
+              window.removeEventListener("touchstart", unlock);
+              window.removeEventListener("click", unlock);
+            };
+            window.addEventListener("touchstart", unlock, { once: true, passive: true });
+            window.addEventListener("click", unlock, { once: true, passive: true });
+          });
+        }
+      };
+
+      tryPlay();
     }
   }, []);
 
@@ -53,6 +72,13 @@ export function Hero() {
     // Check reduced motion preference
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReducedMotion) return;
+
+    // On touch/mobile devices, omit the RAF tilt loop to dedicate full GPU bandwidth to smooth video playback
+    const isTouchDevice = window.matchMedia("(hover: none) and (pointer: coarse)").matches || window.innerWidth < 768;
+    if (isTouchDevice) {
+      logo3D.style.transform = "rotateX(0deg) rotateY(0deg)";
+      return;
+    }
 
     let startTime = Date.now();
     let animFrame: number;
@@ -158,6 +184,8 @@ export function Hero() {
                       muted
                       playsInline
                       preload="auto"
+                      disablePictureInPicture
+                      disableRemotePlayback
                       aria-label="PAXON STUDIO Animated 3D Logo"
                       className="w-full h-auto object-contain select-none pointer-events-none rounded-2xl"
                       style={{
@@ -166,8 +194,6 @@ export function Hero() {
                         WebkitBackfaceVisibility: "hidden",
                         filter: "drop-shadow(0 14px 28px rgba(17,17,17,0.08)) drop-shadow(0 2px 6px rgba(0,0,0,0.04))",
                         mixBlendMode: "multiply",
-                        maskImage: "radial-gradient(ellipse 96% 92% at 50% 55%, black 75%, transparent 100%)",
-                        WebkitMaskImage: "radial-gradient(ellipse 96% 92% at 50% 55%, black 75%, transparent 100%)",
                       }}
                     />
                   </div>
