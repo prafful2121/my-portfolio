@@ -72,7 +72,7 @@ export function Nav() {
               }}
               className="text-[#111111] group-hover:text-[#F4C542] transition-colors duration-300"
             >
-              PRAFFUL'S
+              PAXON STUDIO
             </span>
             <span
               style={{

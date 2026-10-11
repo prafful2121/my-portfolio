@@ -38,6 +38,10 @@ export function Hero() {
     container.addEventListener("mousemove", handleMouseMove);
     container.addEventListener("mouseleave", handleMouseLeave);
 
+    // Check reduced motion preference
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) return;
+
     let startTime = Date.now();
     let animFrame: number;
 
@@ -45,23 +49,23 @@ export function Hero() {
       const elapsed = (Date.now() - startTime) / 1000;
       const scroll = window.scrollY;
 
-      // scroll-induced rolling tilt
-      const scrollTiltX = Math.sin(scroll * 0.003) * 8;
+      // Subtle scroll-induced rolling tilt
+      const scrollTiltX = Math.sin(scroll * 0.002) * 3;
 
       if (isHovered) {
         const rect = container.getBoundingClientRect();
-        // Mouse hover tilt (up to 25 degrees Y, 20 degrees X)
-        targetY = (mouseX / (rect.width / 2)) * 25;
-        targetX = -(mouseY / (rect.height / 2)) * 20 + scrollTiltX;
+        // Restrained, premium mouse tilt (up to 8° Y, 6° X)
+        targetY = (mouseX / (rect.width / 2)) * 8;
+        targetX = -(mouseY / (rect.height / 2)) * 6 + scrollTiltX;
       } else {
-        // Idle sway + scroll parallax tilt
-        targetX = Math.sin(elapsed * 1.1) * 7 + scrollTiltX;
-        targetY = Math.cos(elapsed * 0.8) * 14;
+        // Subtle ambient resting sway (up to 2° X, 4° Y)
+        targetX = Math.sin(elapsed * 0.9) * 2 + scrollTiltX;
+        targetY = Math.cos(elapsed * 0.7) * 4;
       }
 
       // Smooth spring interpolation (lerp)
-      currentX += (targetX - currentX) * 0.07;
-      currentY += (targetY - currentY) * 0.07;
+      currentX += (targetX - currentX) * 0.05;
+      currentY += (targetY - currentY) * 0.05;
 
       // Apply transform directly to GPU compositor thread
       logo3D.style.transform = `rotateX(${currentX.toFixed(2)}deg) rotateY(${currentY.toFixed(2)}deg)`;
@@ -90,22 +94,21 @@ export function Hero() {
           className="absolute -top-12 -left-16 opacity-30 animate-float-slow hidden md:block" 
           size={380} 
         />
-        {/* Removed background ChromeLiquid to keep tagline text readable */}
+        {/* Repositioned GoldSculpture to the bottom left corner to maintain breathing room around tagline */}
         <GoldSculpture 
-          className="absolute bottom-[10%] left-[5%] opacity-20 animate-float-slow" 
-          size={260} 
+          className="absolute bottom-[4%] -left-[2%] opacity-15 animate-float-slow hidden sm:block" 
+          size={240} 
         />
-        {/* Removed background GlassOrb to keep tagline text readable */}
       </div>
 
-      <div className="max-w-[1280px] mx-auto px-6 sm:px-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
-        {/* Left — massive typography: dominates 7 cols */}
-        <div className="lg:col-span-7 relative flex flex-col items-center lg:items-start">
+      <div className="max-w-[1280px] mx-auto px-6 sm:px-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center relative z-10">
+        {/* Left — PAXON STUDIO 3D Brand Anchor: dominates 7 cols */}
+        <div className="lg:col-span-7 relative flex flex-col items-center lg:items-start -mt-4 sm:-mt-6 lg:-mt-8">
           <ScrollReveal variant="fade-in" duration={1200} className="relative z-10 w-full">
             {/* Hover-tilt and scroll-responsive 3D logo container */}
             <div
               ref={containerRef}
-              className="relative select-none w-full max-w-[620px] py-4"
+              className="relative select-none w-full max-w-[500px] sm:max-w-[580px] lg:max-w-[700px] xl:max-w-[740px]"
               style={{
                 perspective: "1200px",
               }}
@@ -116,15 +119,15 @@ export function Hero() {
                   transformStyle: "preserve-3d",
                   transform: "rotateX(0deg) rotateY(0deg)",
                 }}
-                className="relative z-10 transition-transform duration-75 ease-out"
+                className="relative z-10 transition-transform duration-100 ease-out"
               >
-                {/* 3D Ambient Shadow Ground Plane */}
+                {/* 3D Ambient Shadow Ground Plane — subtle studio contact shadow */}
                 <div 
-                  className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[85%] h-8 rounded-[100%] bg-[#111111]/15 blur-xl pointer-events-none"
-                  style={{ transform: "translateZ(-30px)" }}
+                  className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[80%] h-6 rounded-[100%] bg-[#111111]/8 blur-lg pointer-events-none"
+                  style={{ transform: "translateZ(-20px)" }}
                 />
 
-                {/* Main 3D Brand Logo with subtle entrance and gentle ambient float */}
+                {/* Main 3D Brand Logo — crisp high-resolution master asset */}
                 <div 
                   className="relative animate-logo-entrance"
                   style={{
@@ -137,52 +140,34 @@ export function Hero() {
                       alt="PAXON STUDIO"
                       width={897}
                       height={410}
-                      className="w-full h-auto object-contain select-none pointer-events-none drop-shadow-[0_22px_35px_rgba(17,17,17,0.18)]"
+                      className="w-full h-auto object-contain select-none pointer-events-none"
                       style={{
-                        transform: "translateZ(35px)",
-                        filter: "drop-shadow(0 14px 24px rgba(17,17,17,0.14)) drop-shadow(0 2px 4px rgba(0,0,0,0.06))",
+                        transform: "translateZ(30px)",
+                        filter: "drop-shadow(0 10px 20px rgba(17,17,17,0.08)) drop-shadow(0 2px 5px rgba(0,0,0,0.04))",
                       }}
                       loading="eager"
                       decoding="async"
                     />
-
-                    {/* Non-destructive specular light sheen sweep */}
-                    <div 
-                      className="absolute inset-0 overflow-hidden pointer-events-none rounded-2xl"
-                      style={{
-                        transform: "translateZ(50px)",
-                        maskImage: `url(${paxonLogo})`,
-                        WebkitMaskImage: `url(${paxonLogo})`,
-                        maskSize: "contain",
-                        WebkitMaskSize: "contain",
-                        maskRepeat: "no-repeat",
-                        WebkitMaskRepeat: "no-repeat",
-                        maskPosition: "center",
-                        WebkitMaskPosition: "center",
-                      }}
-                    >
-                      <div className="absolute inset-y-0 w-32 bg-gradient-to-r from-transparent via-white/25 to-transparent animate-logo-shimmer" />
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Tagline & Brand Identity immediately underneath */}
-            <div className="mt-4 flex flex-col items-center lg:items-start w-full">
+            {/* Tagline & Brand Identity with calibrated vertical space */}
+            <div className="mt-7 sm:mt-8 lg:mt-9 flex flex-col items-center lg:items-start w-full">
               <p
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
                   letterSpacing: "0.22em",
                 }}
-                className="text-xs sm:text-sm font-bold uppercase text-[#111111] tracking-[0.22em] flex items-center gap-2.5 text-center lg:text-left"
+                className="text-xs sm:text-sm font-semibold uppercase text-[#171717] tracking-[0.22em] flex items-center gap-2.5 text-center lg:text-left"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-[#F4C542]" />
                 PRAFFUL'S AI-POWERED STUDIO
               </p>
 
               {/* Decorative metadata */}
-              <div className="mt-3 flex items-center justify-center lg:justify-start gap-2 text-[10px] tracking-widest text-[#6B6B68] font-mono uppercase">
+              <div className="mt-3.5 flex items-center justify-center lg:justify-start gap-2 text-[10px] tracking-widest text-[#6B6B68] font-mono uppercase">
                 <MapPin size={12} className="text-[#F4C542] flex-shrink-0" />
                 <span>India</span>
               </div>
