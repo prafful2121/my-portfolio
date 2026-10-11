@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import paxonLogo from "../../assets/paxon-logo.png";
+import paxonLogo2x from "../../assets/paxon-logo-2x.png";
+import paxonLogo3x from "../../assets/paxon-logo-3x.png";
 
 const navItems = [
   { label: "Services", href: "#services" },
@@ -60,36 +63,26 @@ export function Nav() {
         <div className="flex flex-col text-left">
           <a
             href="#work"
-            className="flex flex-col select-none group cursor-pointer"
+            className="flex items-center select-none group cursor-pointer"
             onClick={handleNavClick("#work")}
+            aria-label="PAXON STUDIO Home"
           >
-            <span
-              style={{
-                fontFamily: "'Bebas Neue', sans-serif",
-                fontSize: "24px",
-                letterSpacing: "0.05em",
-                lineHeight: "1",
-              }}
-              className="text-[#111111] group-hover:text-[#F4C542] transition-colors duration-300"
-            >
-              PAXON STUDIO
-            </span>
-            <span
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: "9px",
-                letterSpacing: "0.15em",
-                color: "#6B6B68",
-                marginTop: "2px",
-              }}
-              className="uppercase font-semibold group-hover:text-[#F4C542] transition-colors duration-300"
-            >
-              AI-POWERED STUDIO
-            </span>
+            <img
+              src={paxonLogo2x}
+              srcSet={`${paxonLogo} 1x, ${paxonLogo2x} 2x, ${paxonLogo3x} 3x`}
+              alt="PAXON STUDIO"
+              width={897}
+              height={410}
+              className={`w-auto object-contain transition-all duration-300 group-hover:scale-105 ${
+                scrolled ? "h-7 sm:h-8 md:h-8.5" : "h-8.5 sm:h-9.5 md:h-11"
+              }`}
+              loading="eager"
+              decoding="async"
+            />
           </a>
 
           {/* Quick Contact Icons */}
-          <div className="flex items-center gap-2 mt-2 pl-0.5">
+          <div className="flex items-center gap-2 mt-1.5 md:mt-2 pl-0.5">
             <a
               href="mailto:prafful.mahawar2000@gmail.com"
               className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-[rgba(17,17,17,0.12)] flex items-center justify-center text-[#111111]/60 hover:text-[#111111] hover:border-[#111111] hover:bg-[#F4C542]/15 transition-all duration-300"

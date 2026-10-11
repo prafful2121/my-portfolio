@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import "./services-guide.css";
+import paxonLogo from "../../assets/paxon-logo.png";
+import paxonLogo2x from "../../assets/paxon-logo-2x.png";
+import paxonLogo3x from "../../assets/paxon-logo-3x.png";
 
 export function ServicesGuide() {
   const slideTitles = [
@@ -93,9 +96,17 @@ export function ServicesGuide() {
     <div className="services-guide-page">
       {/* Top Navigation Bar */}
       <header className={`header ${currentSlide > 0 ? "scrolled" : ""}`}>
-        <a href="/" className="logo cursor-pointer">
-          <span className="logo-bold">PRAFFUL'S</span>
-          <span className="logo-light">AI-POWERED STUDIO</span>
+        <a href="/" className="logo cursor-pointer" aria-label="PAXON STUDIO Home">
+          <img
+            src={paxonLogo2x}
+            srcSet={`${paxonLogo} 1x, ${paxonLogo2x} 2x, ${paxonLogo3x} 3x`}
+            alt="PAXON STUDIO"
+            width={897}
+            height={410}
+            className="h-8 md:h-9 w-auto object-contain transition-transform duration-300 hover:scale-105"
+            loading="eager"
+            decoding="async"
+          />
         </a>
         <div className="header-right">
           <span className="guide-version">2026/2027 EDITION</span>
